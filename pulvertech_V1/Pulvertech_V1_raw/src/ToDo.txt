@@ -1,0 +1,39 @@
+##############################################################################
+#eletronica
+
+ok	-mudar pinos sensores (fluxo: INT0, velocidade: INT1)
+ok	-remover leitor de cartão sd
+ok	-remover botões 
+ok	-desenvolver icsp 
+ok	-mudar optacopladores para transistor
+-porta para telemetria (serial nativo)
+-porta para ihm
+ok	-mudar relay para 12v
+ok	-mudar acionamento valvula seção
+resolver com chaves manuais - predispor para mais seções
+
+##############################################################################
+#ihm
+
+-suporte para tela
+-case 
+-cabeamento
+-plugs
+-alimentação
+
+##############################################################################
+#interfce gráfica
+
+-tudo(sério)
+
+##############################################################################
+#programa 
+
+-comunicação com ihm(depende interface gráfica)
+-adequar leitura de variáveis para os cálculos
+-alterar algorítmo controlador(controlar retorno)
+-adicionar mais filtros as leituras
+-refinamentos gerais 
+
+
+##############################################################################

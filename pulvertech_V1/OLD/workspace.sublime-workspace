@@ -1,0 +1,793 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"XY",
+				"XYZ_ENABLES_READ"
+			],
+			[
+				"C",
+				"CXYZ_enables"
+			],
+			[
+				"digita",
+				"digitalRead\tArduino digitalRead"
+			],
+			[
+				"speed",
+				"speed"
+			],
+			[
+				"S",
+				"SpeedMillis"
+			],
+			[
+				"X",
+				"X_DIRECTION_READ"
+			],
+			[
+				"X_dir",
+				"X_dir"
+			],
+			[
+				"Z",
+				"Z_step"
+			],
+			[
+				"CX",
+				"CX_en"
+			],
+			[
+				"x",
+				"X_DIRECTION_READ"
+			],
+			[
+				"CX_",
+				"CX_dir"
+			],
+			[
+				"X_",
+				"X_dir"
+			],
+			[
+				"Mill",
+				"MillisValve"
+			],
+			[
+				"valve",
+				"valveMov"
+			],
+			[
+				"Steper",
+				"StepperSpeed"
+			],
+			[
+				"sy",
+				"syn2\tstatement"
+			],
+			[
+				"l1",
+				"l1_delta"
+			],
+			[
+				"l2_",
+				"l2_delta"
+			],
+			[
+				"Ca",
+				"CalibrationKey"
+			],
+			[
+				"Calibration",
+				"CalibrationKey"
+			],
+			[
+				"Calib",
+				"CalibrationKey"
+			],
+			[
+				"Cali",
+				"CalibStateRead"
+			],
+			[
+				"CalibS",
+				"CalibStateAdd"
+			],
+			[
+				"Sd",
+				"SdValid"
+			],
+			[
+				"Lite",
+				"LiterPerHa"
+			],
+			[
+				"Li",
+				"LiterPerHa"
+			],
+			[
+				"M",
+				"MachineWidth"
+			],
+			[
+				"File",
+				"FilaName"
+			],
+			[
+				"Liter",
+				"LiterPerHa"
+			],
+			[
+				"P",
+				"PulseDuration"
+			],
+			[
+				"Flux",
+				"FluxLed"
+			],
+			[
+				"SpeedLE",
+				"SpeedLedState"
+			],
+			[
+				"SpeedLed",
+				"SpeedLedState"
+			],
+			[
+				"digital",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"Flu",
+				"FluxLed"
+			],
+			[
+				"Speed",
+				"SpeedLed"
+			],
+			[
+				"Pulse",
+				"PulseDurationSpeed"
+			],
+			[
+				"time",
+				"timeoutFlux"
+			],
+			[
+				"random",
+				"randomSeed\tArduino randomSeed()"
+			],
+			[
+				"_E",
+				"_EMEA"
+			],
+			[
+				"_",
+				"_EEST"
+			],
+			[
+				"pulse",
+				"PulseDuration"
+			],
+			[
+				"Pul",
+				"pulseCounter"
+			],
+			[
+				"F",
+				"FluxTime"
+			],
+			[
+				"LiterP",
+				"LiterPerPulse"
+			],
+			[
+				"Mete",
+				"MetersPerPulse"
+			],
+			[
+				"Meter",
+				"MeterPP"
+			],
+			[
+				"pul",
+				"PulseTime"
+			],
+			[
+				"print",
+				"println"
+			],
+			[
+				"pulses",
+				"pulses"
+			],
+			[
+				"mills",
+				"MillisOld"
+			],
+			[
+				"D",
+				"digitalWrite"
+			],
+			[
+				"de",
+				"delay\tArduino delay()"
+			],
+			[
+				"set",
+				"setPoint"
+			],
+			[
+				"pin",
+				"pinMode"
+			],
+			[
+				"pi",
+				"pinMode"
+			],
+			[
+				"Close",
+				"CloseSession"
+			],
+			[
+				"Open",
+				"OpenSession"
+			],
+			[
+				"L",
+				"LOOPState"
+			],
+			[
+				"V",
+				"VALVE_PIN2"
+			],
+			[
+				"re",
+				"ReleaseBridge"
+			],
+			[
+				"Pu",
+				"PulseTime"
+			],
+			[
+				"flux",
+				"FluxVal"
+			],
+			[
+				"HIGH",
+				"HIGHState"
+			],
+			[
+				"prin",
+				"println"
+			],
+			[
+				"O",
+				"open"
+			],
+			[
+				"diti",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"di",
+				"digitalWrite\tArduino digitalWrite"
+			],
+			[
+				"out",
+				"Out_A"
+			],
+			[
+				"Out",
+				"Out_A"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nDeviot (Arduino IDE)\n--------------------\n\n  '########::'########:'##::::'##:'####::'#######::'########:\n   ##.... ##: ##.....:: ##:::: ##:. ##::'##.... ##:... ##..::\n   ##:::: ##: ##::::::: ##:::: ##:: ##:: ##:::: ##:::: ##::::\n   ##:::: ##: ######::: ##:::: ##:: ##:: ##:::: ##:::: ##::::\n   ##:::: ##: ##...::::. ##:: ##::: ##:: ##:::: ##:::: ##::::\n   ##:::: ##: ##::::::::. ## ##:::: ##:: ##:::: ##:::: ##::::\n   ########:: ########:::. ###::::'####:. #######::::: ##::::\n  ........:::........:::::...:::::....:::.......::::::..:::::\n  \n  Sublime Text plugin for IoT development\n  \n  **IMPORTANT!**\n  \n  - This plugin requires **Python 2** \n  \n  If after installing python2 you experience any problems, go to `Deviot Menu > Options > Remove Preferences File` and restart Sublime Text\n  \n  If you keep having problems, please submit an issue explaining your problem [here](https://github.com/gepd/Deviot/issues/new)\n  \n  --------------------------------\n  \n  **¡IMPORTANTE!**\n      \n  - Este plugin requiere **Python 2**\n  \n  Si después de instalar python experimentas algún problema, anda a Menu `Deviot > Opciones > Eliminar Archivos de Prefencias` y reinicia Sublime Text.\n  \n  Si continúas con problemas, por favor escríbenos sobre tu problema [aqui](https://github.com/gepd/Deviot/issues/new)\n",
+			"settings":
+			{
+				"buffer_size": 1353,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Deviot: o",
+		"selected_items":
+		[
+			[
+				"Deviot: o",
+				"Deviot: Open Build Folder"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ardui",
+				"Set Syntax: Arduino"
+			],
+			[
+				"c",
+				"Set Syntax: C++"
+			],
+			[
+				"arduin",
+				"Set Syntax: Arduino"
+			],
+			[
+				"arduino",
+				"Set Syntax: Arduino"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"board",
+				"Deviot: Select Board"
+			],
+			[
+				"compile",
+				"Deviot: Compile"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"c++",
+				"Set Syntax: C++"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"java ",
+				"Build With: JavaC"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 247.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"python",
+			"pip",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_command(True)",
+			"java",
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.command_log(True)",
+			"sublime.log_command(True)",
+			"sublime.command_log(True)",
+			"sublime.log_command(True)",
+			"sublime.log_commands(False)",
+			"asda",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"command: stino_build",
+			"command stino_build",
+			"command: stino_build",
+			"stino_build",
+			"sublime.log_commands(False)",
+			"sublime.log_commands(True)",
+			"sublime.log_commands(false)",
+			"sublime.log_commands(True)",
+			"build"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/gabri/Desktop/ScaraArmTest/src/main.cpp",
+		"/C/Users/gabri/Desktop/HF06_Simple_38/HF06_Simple_38.ino",
+		"/C/Users/gabri/Desktop/HF06_Simple_38/fastio.h",
+		"/C/Users/gabri/Desktop/HF06_Simple_38/Configuration.h",
+		"/C/Users/gabri/Desktop/HF06_Simple_38/scara_move.ino",
+		"/C/Users/gabri/Desktop/ScaraRobot/grbl/grbl/examples/grblUpload/grblUpload.ino",
+		"/C/Users/gabri/Desktop/ScaraRobot/grbl/grbl/config.h",
+		"/C/Users/gabri/Desktop/ScaraLabviewControl/ScaraLabviewControl.ino",
+		"/C/Users/gabri/Desktop/ScaraLabviewControl.ino",
+		"/C/Users/gabri/AppData/Local/Temp/Rar$DIa0.151/Configuration.h",
+		"/C/Users/gabri/Desktop/MarlinAlexandre/Marlin-1.0.x/Marlin/Configuration.h",
+		"/C/Users/gabri/Desktop/ScaraRobot/Firmware/grbl/grbl/Makefile",
+		"/C/Users/gabri/Desktop/ScaraRobot/Firmware/grbl/grbl/doc/script/stream.py",
+		"/C/Users/gabri/Desktop/ScaraRobot/Firmware/grbl/grbl/README.md",
+		"/C/Users/gabri/Desktop/ScaraRobot/Firmware/grbl/grbl/COPYING",
+		"/C/Users/gabri/Desktop/ScaraRobot/Firmware/Marlin/Marlin/Configuration.h",
+		"/D/berabot hypercube/software/thumbnails/STL.thumbnail.debug.rtf",
+		"/D/berabot hypercube/Marlin/Marlin/Marlin_main.cpp",
+		"/C/Users/gabri/Desktop/meshForPrint.gcode",
+		"/D/berabot hypercube/Marlin/Marlin/Configuration_adv.h",
+		"/D/berabot hypercube/Marlin/Marlin/Configuration.h",
+		"/F/meshForPrint.gcode",
+		"/F/princesa.gcode",
+		"/D/berabot hypercube/Marlin/Marlin/Marlin.ino",
+		"/C/Users/gabri/Desktop/Marlin/Configuration.h",
+		"/C/Users/gabri/Desktop/Marlin/Marlin.ino",
+		"/D/berabot hypercube/Marlin/Marlin/MarlinConfig.h",
+		"/D/berabot hypercube/Marlin/Marlin/SanityCheck.h",
+		"/D/berabot hypercube/Marlin/Marlin/Marlin.h",
+		"/D/light automation/light automation.ino",
+		"/D/pulvertech/pulvertech_V1/Flux.h",
+		"/D/pulvertech/pulvertech_V1/control.h",
+		"/D/pulvertech/pulvertech_V1/Speed.h",
+		"/D/pulvertech/pulvertech_V1/SDcard.h",
+		"/D/pulvertech/pulvertech_V1/Pulvertech_V1.ino",
+		"/D/berabot hypercube/Marlin/README.md",
+		"/C/Program Files (x86)/Arduino/libraries/ITEADLIB_Arduino_Nextion/examples/Upload/Upload.ino",
+		"/C/Users/gabri/Desktop/arduino_part/arduino_part.ino",
+		"/C/Users/gabri/Desktop/dicomSort/DicomSort.pyw",
+		"/C/Users/gabri/Desktop/workspace/IJ/plugins/DICOM_Sort.java",
+		"/C/Users/gabri/Desktop/workspace/IJ/plugins/DICOM_Sort.class",
+		"/F/Tomo Bolinha/DICOM/D201707/DD2419/B1106609",
+		"/C/Users/gabri/Desktop/DICOM_Sort.java",
+		"/F/Tomo Bolinha/DICOM/D201707/DD2419/A0931531",
+		"/F/Pasta Sem Título 3/ABLT.PDL",
+		"/F/Pasta Sem Título 3/ABLT.LSV",
+		"/F/ABLT.LSV",
+		"/F/ABLT.PDL",
+		"/C/Users/gabri/AppData/Roaming/Sublime Text 3/Packages/User/insert_datetime.py",
+		"/C/Program Files (x86)/Arduino/libraries/ITEADLIB_Arduino_Nextion/NexConfig.h",
+		"/C/Users/gabri/Desktop/arduino_part.ino",
+		"/C/Users/gabri/Desktop/testspdstm32/testspdstm32.ino",
+		"/C/Program Files (x86)/Arduino/examples/02.Digital/BlinkWithoutDelay/BlinkWithoutDelay.ino",
+		"/D/pulvertech/pulvertech_V1/workspace.sublime-workspace",
+		"/C/Users/gabri/Desktop/grbl/grbl/main.c",
+		"/C/Users/gabri/Desktop/grbl/grbl/examples/grblUpload/grblUpload.ino",
+		"/C/Users/gabri/Desktop/grbl/Makefile",
+		"/C/Users/gabri/Desktop/grbl/README.md",
+		"/C/Users/gabri/Desktop/grbl/grbl/grbl.h",
+		"/D/pulvertech/AVR_Pulvertech_V1/Pulvertech_V1_/pulvertech_V1/Pulvertech_V1.cpp",
+		"/C/Users/gabri/Desktop/Robotica Comau/ABLT.LSV",
+		"/C/Users/gabri/Desktop/Robotica Comau/ABLT.PDL",
+		"/C/Users/gabri/AppData/Local/Arduino15/packages.stino-settings",
+		"/D/pulvertech/pulvertech_V1/EEPROM_ANY.h",
+		"/C/Users/gabri/Desktop/stm32loader-master/README",
+		"/C/Users/gabri/Desktop/stm32loader-master/stm32loader.py",
+		"/C/Users/gabri/AppData/Local/Arduino15/packages/esp8266/hardware/esp8266/2.0.0/tools/sdk/include/user_interface.h",
+		"/C/Users/gabri/Desktop/DataBaseEsp/DataBaseEsp.ino",
+		"/C/Users/gabri/AppData/Local/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/tools/sdk/include/user_interface.h",
+		"/C/Users/gabri/Desktop/Marlin/BlinkM.cpp",
+		"/C/Users/gabri/Desktop/Marlin/BlinkM.h",
+		"/C/Users/gabri/Desktop/Marlin/boards.h",
+		"/C/Users/gabri/Desktop/Marlin/cardreader.cpp",
+		"/C/Users/gabri/Desktop/Marlin/cardreader.h",
+		"/C/Users/gabri/Desktop/Marlin/Configuration_adv.h",
+		"/C/Users/gabri/Desktop/Marlin/ConfigurationStore.cpp",
+		"/C/Users/gabri/Desktop/Marlin/ConfigurationStore.h",
+		"/C/Users/gabri/Desktop/Marlin/digipot_mcp4451.cpp",
+		"/C/Users/gabri/Desktop/Marlin/dogm_font_data_marlin.h",
+		"/C/Users/gabri/Desktop/Marlin/dogm_lcd_implementation.h",
+		"/C/Users/gabri/Desktop/Marlin/DOGMbitmaps.h",
+		"/C/Users/gabri/Desktop/Marlin/fastio.h",
+		"/C/Users/gabri/Desktop/Marlin/language.h",
+		"/C/Users/gabri/Desktop/Marlin/language_an.h",
+		"/C/Users/gabri/Desktop/Marlin/language_ca.h",
+		"/C/Users/gabri/Desktop/Marlin/language_de.h",
+		"/C/Users/gabri/Desktop/Marlin/language_en.h",
+		"/C/Users/gabri/Desktop/Marlin/language_es.h",
+		"/C/Users/gabri/Desktop/Marlin/language_eu.h",
+		"/C/Users/gabri/Desktop/Marlin/language_fi.h",
+		"/C/Users/gabri/Desktop/Marlin/language_fr.h",
+		"/C/Users/gabri/Desktop/Marlin/language_it.h",
+		"/C/Users/gabri/Desktop/Marlin/language_nl.h",
+		"/C/Users/gabri/Desktop/Marlin/language_pl.h",
+		"/C/Users/gabri/Desktop/Marlin/language_pt.h",
+		"/C/Users/gabri/Desktop/Marlin/language_ru.h",
+		"/C/Users/gabri/Desktop/Marlin/LiquidCrystalRus.cpp",
+		"/C/Users/gabri/Desktop/Marlin/LiquidCrystalRus.h",
+		"/C/Users/gabri/Desktop/Marlin/Marlin.h",
+		"/C/Users/gabri/Desktop/Marlin/Marlin_main.cpp",
+		"/C/Users/gabri/Desktop/Marlin/MarlinSerial.cpp",
+		"/C/Users/gabri/Desktop/Marlin/MarlinSerial.h",
+		"/C/Users/gabri/Desktop/Marlin/motion_control.cpp",
+		"/C/Users/gabri/Desktop/Marlin/motion_control.h",
+		"/C/Users/gabri/Desktop/Marlin/pins.h",
+		"/C/Users/gabri/Desktop/Marlin/planner.cpp",
+		"/C/Users/gabri/Desktop/Marlin/planner.h",
+		"/C/Users/gabri/Desktop/Marlin/qr_solve.cpp",
+		"/C/Users/gabri/Desktop/Marlin/qr_solve.h",
+		"/C/Users/gabri/Desktop/Marlin/Sd2Card.cpp",
+		"/C/Users/gabri/Desktop/Marlin/Sd2Card.h",
+		"/C/Users/gabri/Desktop/Marlin/Sd2PinMap.h",
+		"/C/Users/gabri/Desktop/Marlin/SdBaseFile.cpp",
+		"/C/Users/gabri/Desktop/Marlin/SdBaseFile.h",
+		"/C/Users/gabri/Desktop/Marlin/SdFatConfig.h",
+		"/C/Users/gabri/Desktop/Marlin/SdFatStructs.h",
+		"/C/Users/gabri/Desktop/Marlin/SdFatUtil.cpp",
+		"/C/Users/gabri/Desktop/Marlin/SdFatUtil.h",
+		"/C/Users/gabri/Desktop/Marlin/SdFile.cpp",
+		"/C/Users/gabri/Desktop/Marlin/SdFile.h",
+		"/C/Users/gabri/Desktop/Marlin/SdInfo.h",
+		"/C/Users/gabri/Desktop/Marlin/SdVolume.cpp",
+		"/C/Users/gabri/Desktop/Marlin/SdVolume.h",
+		"/C/Users/gabri/Desktop/Marlin/Servo.cpp",
+		"/C/Users/gabri/Desktop/Marlin/Servo.h",
+		"/C/Users/gabri/Desktop/Marlin/speed_lookuptable.h",
+		"/C/Users/gabri/Desktop/Marlin/stepper.cpp",
+		"/C/Users/gabri/Desktop/Marlin/stepper.h"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"##::::\n",
+			"serial",
+			"G0",
+			"G1",
+			"scara",
+			"robot",
+			"corexy",
+			"scara",
+			"autotune",
+			"thermistor",
+			"g1",
+			"g29",
+			"feedrate",
+			"speed",
+			"auto",
+			"thermistor",
+			"heated",
+			"number",
+			"step",
+			"dimensions",
+			"sizedimenstions",
+			"size",
+			"corexy",
+			"lcd",
+			"9",
+			"db9",
+			"fan",
+			"FIX_MOUNTED_PROBE",
+			"graphics",
+			"board",
+			"auto ",
+			"size",
+			"auto",
+			"core",
+			"wrong dimentions",
+			"wrong size",
+			"content",
+			"pulseCount",
+			"testline",
+			"flx",
+			"float",
+			"Out_B",
+			"Out_A",
+			"history",
+			"fluxOld",
+			"Min"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"pulseCountSpeed",
+			"Spd",
+			"double",
+			"VALVE_SESSION_PIN2",
+			"VALVE_SESSION_PIN",
+			"historySpeed",
+			"historyFlux"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"auto_indent": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_width": 2,
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 83.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.stino_build_panel":
+	{
+		"height": 127.0
+	},
+	"output.stino_panel":
+	{
+		"height": 100.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 213.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 154.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
