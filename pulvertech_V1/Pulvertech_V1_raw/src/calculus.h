@@ -11,6 +11,11 @@ float Calculate(float Q, float V, float L)
     return (Q * V * L) / 600;
 }
 
+float MaxSpeedVal(float Q, float L)
+{
+	return 12000/(Q*L);
+}
+
 float mapFloat(float x, float a, float b, float c, float d)
 {
     float f = x / (b - a) * (d - c) + c;

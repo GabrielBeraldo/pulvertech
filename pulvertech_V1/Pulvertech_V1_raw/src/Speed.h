@@ -46,7 +46,7 @@ void SpeedSetup()
     pinMode(SpeedCalibrateButton, INPUT);
     pinMode(SpeedLed, OUTPUT);
 
-    for(int i = 0; i < 10; i++) historySpeed[i] = 0;
+    for(int i = 0; i < 10; i++) historySpeed[i] = 0.01;
 
     attachInterrupt(sensorInterruptSpeed, PulseTime, CHANGE);
 }

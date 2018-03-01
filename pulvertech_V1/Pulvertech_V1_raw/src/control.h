@@ -18,7 +18,7 @@
 #define VALVE_PIN 10
 #define VALVE_PIN2 9
 #define VALVE_SESSION_PIN 8
-#define VALVE_SESSION_PIN2 7
+
 
 //////////////////////////////////////////////////////////////////////////////////////
 //////initialization of vars and functions///////////////////////////////////////////
@@ -47,7 +47,6 @@ void PIDSetup()
     pinMode(VALVE_PIN, OUTPUT);
     pinMode(VALVE_PIN2, OUTPUT);
     pinMode(VALVE_SESSION_PIN, OUTPUT);
-    pinMode(VALVE_SESSION_PIN2, OUTPUT);
 
     Open(255);
     delay(5000);
@@ -159,19 +158,10 @@ void ReleaseBridge()
 void OpenSession()
 {
     digitalWrite(VALVE_SESSION_PIN, 1);
-    digitalWrite(VALVE_SESSION_PIN2, 0);
 }
 
 void CloseSession()
 {
     digitalWrite(VALVE_SESSION_PIN, 0);
-    digitalWrite(VALVE_SESSION_PIN2, 1);
-
-}
-
-void ReleaseSession()
-{
-    digitalWrite(VALVE_SESSION_PIN, 0);
-    digitalWrite(VALVE_SESSION_PIN2, 0);
 
 }

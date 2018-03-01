@@ -25,6 +25,8 @@
 
 #include <Arduino.h>
 #include <SPI.h>
+#include <SoftwareSerial.h>
+
 #include "pins_arduino.h"
 #include "Speed.h"
 #include "Flux.h"
@@ -34,9 +36,6 @@
 #include "EEPROM_ANY.h"
 #include "SDcard.h"
 //#include "BoardAuth.h"
-//Beginning of Auto generated function prototypes by Atmel Studio
-//End of Auto generated function prototypes by Atmel Studio
-
 
 
 #define BaudRate 9600
@@ -57,14 +56,17 @@
 #define _EEST 100
 #define _Q 0.1
 
+#define s_EMEA 100
+#define s_EEST 100
+#define s_Q 0.4
+
 
 double MetersPerPulse = 49212; //50000; //0.15*pow(10,6); //FURTHER INFO: done 1016 pulse conunt in first real test, so number was round for test purpouses
 double LitersPerPulse = 1230;  //real calibration number Set as Default
-byte CalibrationKey=010; //Key that indicates that the values on eeprom was already set as default or calibrated
-
-
 int LiterPerHa = 60;
 float MachineWidth = 6.0;
+byte CalibrationKey=010; //Key that indicates that the values on eeprom was already set as default or calibrated
+
 float SdData[5];
 bool SdValid = false;
 bool ValveState = true;
@@ -73,11 +75,15 @@ unsigned long MillisOld = 0;
 
 SimpleKalmanFilter KF_SetPoint = SimpleKalmanFilter(_EMEA, _EEST, _Q);
 SimpleKalmanFilter KF_Flux = SimpleKalmanFilter(_EMEA, _EEST, _Q);
+SimpleKalmanFilter KF_SpeedVal = SimpleKalmanFilter(s_EMEA, s_EEST, s_Q);
 
-
+SoftwareSerial TelemetrySerial(A4, A5); // RX, TX
 
 void setup()
 {
+
+	TelemetrySerial.begin(BaudRate);
+	TelemetrySerial.println("");
 		//////////////////////////////////////////////////////////////////
 		//Test if calibration was set as valid(first boot), in case it's not, store default values and set as valid values
 		byte CalibStateRead = EEPROM.read(0);
@@ -85,65 +91,44 @@ void setup()
 		{
 			eepromWrite(MeterCalibrationAdd, MetersPerPulse);
 			eepromWrite(LiterCalibrationAdd, LitersPerPulse);
+			eepromWrite(MachineWidthAdd, MachineWidth);
+			eepromWrite(LiterPerHaAdd, LiterPerHa);
 			eepromWrite(CalibStateAdd, CalibrationKey);
 
-			Serial.println("CalibrationKey stored");
-			Serial.println(EEPROM.read(0));
+			TelemetrySerial.println("CalibrationKey stored");
+			TelemetrySerial.println(EEPROM.read(0));
 
 		}
-		else Serial.println("Ok Key");
+		else TelemetrySerial.println("Ok EEPROM Key");
 		////////////////////////////////////////////////////////////////
-
-	Serial.begin(BaudRate);
-	Serial.println("");
-	Serial.println("Start AVR");
-
+	
+	
 
 	pinMode(SpeedSimulationButton, INPUT);
 	pinMode(SpeedSimulationLed, OUTPUT);
 
-	Serial.println("Start SD");
-	SdValid = ReadSdInfo(SdData);
-
-	if(SdValid)
-	{
-
-		LiterPerHa = SdData[0];
-		MachineWidth = SdData[1] * SdData[2];
-		int PulsesPerLiter = SdData[3];
-		LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
-		eepromWrite(LiterCalibrationAdd, LitersPerPulse);
-		eepromWrite(MachineWidthAdd, MachineWidth);
-		eepromWrite(LiterPerHaAdd, LiterPerHa);
-
-		Serial.println("Info Updated");
-	}
-	else
-	{
-		eepromRead(MeterCalibrationAdd, MetersPerPulse);
-		eepromRead(LiterCalibrationAdd, LitersPerPulse);
-		eepromRead(MachineWidthAdd, MachineWidth);
-		eepromRead(LiterPerHaAdd, LiterPerHa);
-
-		Serial.println("Using Old Info");
-	}
-
-	Serial.print("MPP: ");
-	Serial.println(MetersPerPulse);
-	Serial.print("LPP: ");
-	Serial.println(LitersPerPulse);
-	Serial.print("MachineWidth: ");
-	Serial.println(MachineWidth);
-	Serial.print("LiterPerHa: ");
-	Serial.println(LiterPerHa);
-
+	TelemetrySerial.println("Starting variables");
+	
+	eepromRead(MeterCalibrationAdd, MetersPerPulse);
+	eepromRead(LiterCalibrationAdd, LitersPerPulse);
+	eepromRead(MachineWidthAdd, MachineWidth);
+	eepromRead(LiterPerHaAdd, LiterPerHa);
+	
+	TelemetrySerial.print("MPP: ");
+	TelemetrySerial.println(MetersPerPulse);
+	TelemetrySerial.print("LPP: ");
+	TelemetrySerial.println(LitersPerPulse);
+	TelemetrySerial.print("MachineWidth: ");
+	TelemetrySerial.println(MachineWidth);
+	TelemetrySerial.print("LiterPerHa: ");
+	TelemetrySerial.println(LiterPerHa);
 
 
 	SpeedSetup();
 	FluxSetup();
 	PIDSetup();
 
-	Serial.println("initialization done.");
+	TelemetrySerial.println("initialization done.");
 
 }
 
@@ -165,8 +150,8 @@ void loop()
 				SpeedSimulationState = !SpeedSimulationState;
 				digitalWrite(SpeedSimulationLed,SpeedSimulationState);
 
-				Serial.print("SpeedSimulation set as: ");
-				Serial.println(SpeedSimulationState);
+				TelemetrySerial.print("SpeedSimulation set as: ");
+				TelemetrySerial.println(SpeedSimulationState);
 
 				while(digitalRead(SpeedSimulationButton));
 			}
@@ -182,15 +167,15 @@ void loop()
 			if((millis() - MillisOld) >= ButtonPressTime)
 			{
 
-				Serial.println("SpeedCalibrate Start");
+				TelemetrySerial.println("SpeedCalibrate Start");
 				digitalWrite(SpeedLed, 1);
 				while(digitalRead(SpeedCalibrateButton));
 
 				MetersPerPulse = SpeedCalibrate();
 				eepromWrite(MeterCalibrationAdd, MetersPerPulse);
 
-				Serial.println(MetersPerPulse);
-				Serial.println("SpeedCalibrate end");
+				TelemetrySerial.println(MetersPerPulse);
+				TelemetrySerial.println("SpeedCalibrate end");
 				digitalWrite(SpeedLed, 0);
 				MillisOld = millis();
 				while(digitalRead(SpeedCalibrateButton));
@@ -206,15 +191,15 @@ void loop()
 			if((millis() - MillisOld) >= ButtonPressTime)
 			{
 
-				Serial.println("FluxCalibrate Start");
+				TelemetrySerial.println("FluxCalibrate Start");
 				digitalWrite(FluxLed, 1);
 				while(digitalRead(FluxCalibrateButton));
 
 				LitersPerPulse = FluxCalibrate();
 				eepromWrite(LiterCalibrationAdd, LitersPerPulse);
 
-				Serial.println(LitersPerPulse);
-				Serial.println("FluxCalibrate end");
+				TelemetrySerial.println(LitersPerPulse);
+				TelemetrySerial.println("FluxCalibrate end");
 				digitalWrite(FluxLed, 0);
 				MillisOld = millis();
 				while(digitalRead(FluxCalibrateButton));
@@ -235,9 +220,12 @@ void loop()
 	else{
 		SpeedVal=ReadSpeed(MetersPerPulse);
 		SpeedVal = SpeedAverage(SpeedVal, 5);
+		SpeedVal = constrain(SpeedVal, 0, MaxSpeedVal(LiterPerHa, MachineWidth));
+		SpeedVal = KF_SpeedVal.updateEstimate(SpeedVal);
 	}
 
 	float SetPointLPM = Calculate(LiterPerHa, SpeedVal, MachineWidth); 	//L/min, km/h, meters
+	SetPointLPM = constrain(SetPointLPM, 0, 20);
 
 	float setPoint = convert2SetPoint(SetPointLPM);              			//convert liter per min into setPoint, going from 0 to 1023(10bits)
 	float FeedbackFlux = convert2SetPoint(FluxLPM);
@@ -255,22 +243,17 @@ void loop()
 	if(minSpd  && !ValveState) //tests if the speed is higher then min speed and the valve is closed, then open it
 	{
 
-		Serial.println("Opening Valve");
-		ReleaseBridge();
+		TelemetrySerial.println("Opening Valve");
 		OpenSession();
 		ValveState = true; //indicates that the valve is now open
-		delay(DelayValve);
-		ReleaseSession();
+
 	}
 	else if (!minSpd && ValveState) //tests if the speed is smaller then min speed and the valve is open, then close it
 	{
 
-		Serial.println("Closing Valve");
-		ReleaseBridge();
+		TelemetrySerial.println("Closing Valve");
 		CloseSession();
 		ValveState = false; //indicates that the valve is now closed
-		delay(DelayValve);
-		ReleaseSession();
 	}
 	else if(minSpd && ValveState)
 	{
@@ -283,25 +266,25 @@ void loop()
 
 	#ifdef telemetry
 
-	Serial.print(SpeedVal);
+	TelemetrySerial.print(SpeedVal);
 
-	Serial.print(F(", "));
-	Serial.print(FluxLPM);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(FluxLPM);
 
-	Serial.print(F(", "));
-	Serial.print(SetPointLPM);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(SetPointLPM);
 
-	Serial.print(F(", "));
-	Serial.print(setPoint);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(setPoint);
 
-	Serial.print(F(", "));
-	Serial.print(FeedbackFlux);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(FeedbackFlux);
 
-	Serial.print(F(", "));
-	Serial.print(duttyCicle);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(duttyCicle);
 
-	Serial.print(F(", "));
-	Serial.println(ValveState);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.println(ValveState);
 
 	#endif
 

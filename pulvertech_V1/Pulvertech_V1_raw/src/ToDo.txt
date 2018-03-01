@@ -6,8 +6,8 @@ ok	-remover leitor de cartão sd
 ok	-remover botões 
 ok	-desenvolver icsp 
 ok	-mudar optacopladores para transistor
--porta para telemetria (serial nativo)
--porta para ihm
+ok	-porta para telemetria (serial nativo)
+ok	-porta para ihm
 ok	-mudar relay para 12v
 ok	-mudar acionamento valvula seção
 resolver com chaves manuais - predispor para mais seções
@@ -30,6 +30,7 @@ resolver com chaves manuais - predispor para mais seções
 #programa 
 
 -comunicação com ihm(depende interface gráfica)
+ok -adequar acionamnto da valvula de seção
 -adequar leitura de variáveis para os cálculos
 -alterar algorítmo controlador(controlar retorno)
 -adicionar mais filtros as leituras
