@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:lc="http://www.librecad.org" xmlns:xlink="http://www.w3.org/1999/xlink" width="77.6478mm" height="40.1828mm" viewBox="0 0 77.6478 40.1828">
+    <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <path d="M44.2214,28.2194 L61.3664,28.2194 A0.508,0.508 0 0,0 61.3664,27.2034 L44.2214,27.2034 A0.508,0.508 0 0,0 44.2214,28.2194 Z "/>
+        <path d="M61.7256,28.0706 L66.1706,23.6256 A0.50798551,0.50798551 0 0,0 65.4522,22.9072 L61.0072,27.3522 A0.50798551,0.50798551 0 1,0 61.7256,28.0706 Z "/>
+        <path d="M65.8114,23.7744 L69.5452,23.7744 A0.508,0.508 0 0,0 69.5452,22.7584 L65.8114,22.7584 A0.508,0.508 0 0,0 65.8114,23.7744 Z "/>
+        <path d="M69.186,23.6256 L69.2622,23.7018 A0.50798551,0.50798551 0 1,0 69.9806,22.9834 L69.9044,22.9072 A0.50798551,0.50798551 0 0,0 69.186,23.6256 Z "/>
+        <path d="M30.8864,27.8384 L30.0739,27.8384 A0.508,0.508 0 0,0 30.0739,28.8544 L30.8864,28.8544 A0.508,0.508 0 0,0 30.8864,27.8384 Z "/>
+        <path d="M27.1522,29.4894 L29.4389,29.4894 A0.508,0.508 0 0,0 29.4389,28.4734 L27.1522,28.4734 A0.508,0.508 0 0,0 27.1522,29.4894 Z "/>
+        <path d="M29.7982,29.3406 L30.4332,28.7056 A0.50802087,0.50802087 0 0,0 29.7147,27.9872 L29.0797,28.6222 A0.50802087,0.50802087 0 1,0 29.7982,29.3406 Z "/>
+        <path d="M27.4356,29.4164 L27.5114,29.3406 A0.50798551,0.50798551 0 1,0 26.793,28.6222 L26.7172,28.698 A0.50798551,0.50798551 0 0,0 27.4356,29.4164 Z "/>
+        <path d="M6.1214,30.861 L13.1318,30.861 A0.635,0.635 0 0,0 13.1318,29.591 L6.1214,29.591 A0.635,0.635 0 0,0 6.1214,30.861 Z "/>
+        <path d="M15.6464,18.8214 L15.6464,27.0764 A0.635,0.635 0 0,0 16.9164,27.0764 L16.9164,18.8214 A0.635,0.635 0 0,0 15.6464,18.8214 Z "/>
+        <path d="M16.7304,18.3724 L15.4604,17.1024 A0.63498189,0.63498189 0 0,0 14.5624,18.0004 L15.8324,19.2704 A0.63498189,0.63498189 0 0,0 16.7304,18.3724 Z "/>
+        <path d="M15.4604,17.1024 L14.8254,16.4674 A0.63498189,0.63498189 0 1,0 13.9274,17.3654 L14.5624,18.0004 A0.63498189,0.63498189 0 1,0 15.4604,17.1024 Z "/>
+        <path d="M15.0114,16.9164 L15.0114,13.1064 A0.635,0.635 0 0,0 13.7414,13.1064 L13.7414,16.9164 A0.635,0.635 0 0,0 15.0114,16.9164 Z "/>
+        <path d="M14.8254,13.5554 L16.7304,11.6504 A0.63498189,0.63498189 0 0,0 15.8324,10.7524 L13.9274,12.6574 A0.63498189,0.63498189 0 1,0 14.8254,13.5554 Z "/>
+        <path d="M16.2814,11.8364 L18.8214,11.8364 A0.635,0.635 0 0,0 18.8214,10.5664 L16.2814,10.5664 A0.635,0.635 0 0,0 16.2814,11.8364 Z "/>
+        <path d="M19.2704,11.6504 L19.9054,11.0154 A0.63498189,0.63498189 0 0,0 19.0074,10.1174 L18.3724,10.7524 A0.63498189,0.63498189 0 1,0 19.2704,11.6504 Z "/>
+        <path d="M20.0914,10.5664 L20.0914,6.7564 A0.635,0.635 0 0,0 18.8214,6.7564 L18.8214,10.5664 A0.635,0.635 0 0,0 20.0914,10.5664 Z "/>
+        <path d="M19.9054,7.2054 L21.1754,5.9354 A0.63498189,0.63498189 0 1,0 20.2774,5.0374 L19.0074,6.3074 A0.63498189,0.63498189 0 0,0 19.9054,7.2054 Z "/>
+        <path d="M20.7264,6.1214 L21.9964,6.1214 A0.635,0.635 0 0,0 21.9964,4.8514 L20.7264,4.8514 A0.635,0.635 0 0,0 20.7264,6.1214 Z "/>
+        <path d="M21.9964,6.1214 L27.7114,6.1214 A0.635,0.635 0 0,0 27.7114,4.8514 L21.9964,4.8514 A0.635,0.635 0 0,0 21.9964,6.1214 Z "/>
+        <path d="M44.8996,6.1214 L46.1142,6.1214 A0.635,0.635 0 0,0 46.1142,4.8514 L44.8996,4.8514 A0.635,0.635 0 0,0 44.8996,6.1214 Z "/>
+        <path d="M41.9236,6.1214 L44.8996,6.1214 A0.635,0.635 0 0,0 44.8996,4.8514 L41.9236,4.8514 A0.635,0.635 0 0,0 41.9236,6.1214 Z "/>
+        <path d="M41.9236,4.8514 L27.7114,4.8514 A0.635,0.635 0 0,0 27.7114,6.1214 L41.9236,6.1214 A0.635,0.635 0 0,0 41.9236,4.8514 Z "/>
+        <path d="M46.1142,6.1214 L50.5714,6.1214 A0.635,0.635 0 0,0 50.5714,4.8514 L46.1142,4.8514 A0.635,0.635 0 0,0 46.1142,6.1214 Z "/>
+        <path d="M13.9274,28.5324 L12.6828,29.777 A0.63498189,0.63498189 0 0,0 13.5808,30.675 L14.8254,29.4304 A0.63498189,0.63498189 0 0,0 13.9274,28.5324 Z "/>
+        <path d="M14.8254,29.4304 L16.7304,27.5254 A0.63498189,0.63498189 0 0,0 15.8324,26.6274 L13.9274,28.5324 A0.63498189,0.63498189 0 0,0 14.8254,29.4304 Z "/>
+        <path d="M8.7635,18.0594 L15.0114,18.0594 A0.508,0.508 0 0,0 15.0114,17.0434 L8.7635,17.0434 A0.508,0.508 0 0,0 8.7635,18.0594 Z "/>
+        <path d="M8.7635,17.0434 L6.1976,17.0434 A0.508,0.508 0 0,0 6.1976,18.0594 L8.7635,18.0594 A0.508,0.508 0 0,0 8.7635,17.0434 Z "/>
+        <path d="M21.4884,5.4864 L21.4884,7.3914 A0.508,0.508 0 0,0 22.5044,7.3914 L22.5044,5.4864 A0.508,0.508 0 0,0 21.4884,5.4864 Z "/>
+        <path d="M27.2034,5.4864 L27.2034,7.3914 A0.508,0.508 0 0,0 28.2194,7.3914 L28.2194,5.4864 A0.508,0.508 0 0,0 27.2034,5.4864 Z "/>
+        <path d="M46.4856,5.1394 L46.4734,5.1272 A0.50798551,0.50798551 0 0,0 45.755,5.8456 L45.7672,5.8578 A0.50798551,0.50798551 0 0,0 46.4856,5.1394 Z "/>
+        <path d="M14.3764,29.6164 L20.7264,29.6164 A0.635,0.635 0 0,0 20.7264,28.3464 L14.3764,28.3464 A0.635,0.635 0 0,0 14.3764,29.6164 Z "/>
+        <path d="M25.8064,28.3464 L20.7264,28.3464 A0.635,0.635 0 0,0 20.7264,29.6164 L25.8064,29.6164 A0.635,0.635 0 0,0 25.8064,28.3464 Z "/>
+        <path d="M25.3574,29.4304 L26.6274,30.7004 A0.63498189,0.63498189 0 1,0 27.5254,29.8024 L26.2554,28.5324 A0.63498189,0.63498189 0 1,0 25.3574,29.4304 Z "/>
+        <path d="M27.7114,31.5214 L27.7114,30.2514 A0.635,0.635 0 0,0 26.4414,30.2514 L26.4414,31.5214 A0.635,0.635 0 0,0 27.7114,31.5214 Z "/>
+        <path d="M27.7114,27.7114 L27.7114,23.2664 A0.635,0.635 0 0,0 26.4414,23.2664 L26.4414,27.7114 A0.635,0.635 0 0,0 27.7114,27.7114 Z "/>
+        <path d="M26.6274,27.2624 L25.3574,28.5324 A0.63498189,0.63498189 0 1,0 26.2554,29.4304 L27.5254,28.1604 A0.63498189,0.63498189 0 1,0 26.6274,27.2624 Z "/>
+        <path d="M26.4414,23.2664 L26.4414,31.5214 A0.635,0.635 0 0,0 27.7114,31.5214 L27.7114,23.2664 A0.635,0.635 0 0,0 26.4414,23.2664 Z "/>
+        <path d="M45.1438,5.8169 L45.1869,5.7738 A0.40640962,0.40640962 0 0,0 44.6122,5.199 L44.569,5.2422 A0.40640962,0.40640962 0 0,0 45.1438,5.8169 Z "/>
+        <path d="M58.6404,22.4454 L58.8944,22.1914 A0.63498189,0.63498189 0 1,0 57.9964,21.2934 L57.7424,21.5474 A0.63498189,0.63498189 0 1,0 58.6404,22.4454 Z "/>
+        <path d="M50.2192,6.0148 L52.1242,7.2848 A0.63502079,0.63502079 0 0,0 52.8286,6.228 L50.9236,4.958 A0.63502079,0.63502079 0 0,0 50.2192,6.0148 Z "/>
+        <path d="M51.8414,8.4059 L51.8414,14.0006 A0.635,0.635 0 0,0 53.1114,14.0006 L53.1114,8.4059 A0.635,0.635 0 0,0 51.8414,8.4059 Z "/>
+        <path d="M53.1114,8.4059 L53.1114,6.7564 A0.635,0.635 0 0,0 51.8414,6.7564 L51.8414,8.4059 A0.635,0.635 0 0,0 53.1114,8.4059 Z "/>
+        <path d="M53.1114,17.0199 L53.1114,14.0006 A0.635,0.635 0 0,0 51.8414,14.0006 L51.8414,17.0199 A0.635,0.635 0 0,0 53.1114,17.0199 Z "/>
+        <path d="M51.8414,17.0199 L51.8414,20.7264 A0.635,0.635 0 0,0 53.1114,20.7264 L53.1114,17.0199 A0.635,0.635 0 0,0 51.8414,17.0199 Z "/>
+        <path d="M52.1924,21.2944 L53.4624,21.9294 A0.63504331,0.63504331 0 1,0 54.0304,20.7934 L52.7604,20.1584 A0.63504331,0.63504331 0 0,0 52.1924,21.2944 Z "/>
+        <path d="M53.7464,21.9964 L58.0644,21.9964 A0.635,0.635 0 0,0 58.0644,20.7264 L53.7464,20.7264 A0.635,0.635 0 0,0 53.7464,21.9964 Z "/>
+        <path d="M57.6154,21.8104 L57.9964,22.1914 A0.63498189,0.63498189 0 0,0 58.8944,21.2934 L58.5134,20.9124 A0.63498189,0.63498189 0 1,0 57.6154,21.8104 Z "/>
+        <path d="M58.4454,22.3774 L62.6364,22.3774 A0.635,0.635 0 0,0 62.6364,21.1074 L58.4454,21.1074 A0.635,0.635 0 0,0 58.4454,22.3774 Z "/>
+        <path d="M64.6094,22.1914 L68.8004,18.0004 A0.63498189,0.63498189 0 0,0 67.9024,17.1024 L63.7114,21.2934 A0.63498189,0.63498189 0 0,0 64.6094,22.1914 Z "/>
+        <path d="M68.3514,18.1864 L69.5452,18.1864 A0.635,0.635 0 0,0 69.5452,16.9164 L68.3514,16.9164 A0.635,0.635 0 0,0 68.3514,18.1864 Z "/>
+        <path d="M69.9942,18.0004 L70.0704,17.9242 A0.63498189,0.63498189 0 0,0 69.1724,17.0262 L69.0962,17.1024 A0.63498189,0.63498189 0 0,0 69.9942,18.0004 Z "/>
+        <path d="M62.0014,16.9164 L62.0014,21.7424 A0.635,0.635 0 0,0 63.2714,21.7424 L63.2714,16.9164 A0.635,0.635 0 0,0 62.0014,16.9164 Z "/>
+        <path d="M42.0878,9.9314 L42.0878,5.7286 A0.4064,0.4064 0 0,0 41.275,5.7286 L41.275,9.9314 A0.4064,0.4064 0 0,0 42.0878,9.9314 Z "/>
+        <path d="M41.9688,6.016 L42.211,5.7738 A0.40644498,0.40644498 0 1,0 41.6362,5.199 L41.394,5.4412 A0.40644498,0.40644498 0 0,0 41.9688,6.016 Z "/>
+        <path d="M51.8269,13.2195 L52.0861,14.1137 A0.40637054,0.40637054 0 0,0 52.8667,13.8874 L52.6076,12.9933 A0.40640464,0.40640464 0 0,0 51.8269,13.2195 Z "/>
+        <path d="M51.8096,8.3138 L52.189,8.6932 A0.40640962,0.40640962 0 1,0 52.7638,8.1185 L52.3843,7.739 A0.40640962,0.40640962 0 0,0 51.8096,8.3138 Z "/>
+        <path d="M59.4614,16.2814 L60.7314,16.2814 A0.635,0.635 0 0,0 60.7314,15.0114 L59.4614,15.0114 A0.635,0.635 0 0,0 59.4614,16.2814 Z "/>
+        <path d="M60.3792,16.1748 L62.2842,17.4448 A0.63502079,0.63502079 0 1,0 62.9886,16.388 L61.0836,15.118 A0.63502079,0.63502079 0 0,0 60.3792,16.1748 Z "/>
+        <path d="M62.6364,22.3774 L64.1604,22.3774 A0.635,0.635 0 0,0 64.1604,21.1074 L62.6364,21.1074 A0.635,0.635 0 0,0 62.6364,22.3774 Z "/>
+        <path d="M49.9364,9.0678 L52.2209,9.0678 A0.4064,0.4064 0 0,0 52.2209,8.255 L49.9364,8.255 A0.4064,0.4064 0 0,0 49.9364,9.0678 Z "/>
+        <path d="M52.5082,8.9488 L52.7638,8.6932 A0.40640962,0.40640962 0 1,0 52.189,8.1185 L51.9335,8.374 A0.40640962,0.40640962 0 1,0 52.5082,8.9488 Z "/>
+        <path d="M49.9364,17.3228 L52.3729,17.3228 A0.4064,0.4064 0 0,0 52.3729,16.51 L49.9364,16.51 A0.4064,0.4064 0 0,0 49.9364,17.3228 Z "/>
+        <path d="M52.0855,17.2038 L52.189,17.3073 A0.40640962,0.40640962 0 1,0 52.7638,16.7326 L52.6602,16.629 A0.40640962,0.40640962 0 1,0 52.0855,17.2038 Z "/>
+        <path d="M6.1185,17.5768 L8.7606,17.653 A0.10164282,0.10164282 0 1,0 8.7665,17.4498 L6.1243,17.3736 A0.10164138,0.10164138 0 1,0 6.1185,17.5768 Z "/>
+        <path d="M35.3314,7.7978 L38.5064,7.7978 A0.4064,0.4064 0 0,0 38.5064,6.985 L35.3314,6.985 A0.4064,0.4064 0 0,0 35.3314,7.7978 Z "/>
+        <path d="M38.219,7.6788 L38.854,8.3138 A0.40644498,0.40644498 0 0,0 39.4288,7.739 L38.7938,7.104 A0.40644498,0.40644498 0 1,0 38.219,7.6788 Z "/>
+        <path d="M38.735,8.0264 L38.735,11.8364 A0.4064,0.4064 0 0,0 39.5478,11.8364 L39.5478,8.0264 A0.4064,0.4064 0 0,0 38.735,8.0264 Z "/>
+        <path d="M38.854,12.1238 L39.489,12.7588 A0.40644498,0.40644498 0 1,0 40.0638,12.184 L39.4288,11.549 A0.40644498,0.40644498 0 0,0 38.854,12.1238 Z "/>
+        <path d="M39.7764,12.8778 L41.6814,12.8778 A0.4064,0.4064 0 0,0 41.6814,12.065 L39.7764,12.065 A0.4064,0.4064 0 0,0 39.7764,12.8778 Z "/>
+        <path d="M6.1336,7.9755 L9.3086,7.8993 A0.5080465,0.5080465 0 1,0 9.2842,6.8835 L6.1092,6.9597 A0.5080465,0.5080465 0 0,0 6.1336,7.9755 Z "/>
+        <path d="M8.9372,7.7506 L10.2072,9.0206 A0.50798551,0.50798551 0 1,0 10.9256,8.3022 L9.6556,7.0322 A0.50798551,0.50798551 0 0,0 8.9372,7.7506 Z "/>
+        <path d="M10.0584,8.6614 L10.0584,13.7414 A0.508,0.508 0 0,0 11.0744,13.7414 L11.0744,8.6614 A0.508,0.508 0 0,0 10.0584,8.6614 Z "/>
+        <path d="M10.2072,14.1006 L11.4772,15.3706 A0.50798551,0.50798551 0 0,0 12.1956,14.6522 L10.9256,13.3822 A0.50798551,0.50798551 0 0,0 10.2072,14.1006 Z "/>
+        <path d="M11.8364,15.5194 L12.4714,15.5194 A0.508,0.508 0 0,0 12.4714,14.5034 L11.8364,14.5034 A0.508,0.508 0 0,0 11.8364,15.5194 Z "/>
+        <path d="M30.2514,25.0444 L31.5214,25.0444 A0.508,0.508 0 0,0 31.5214,24.0284 L30.2514,24.0284 A0.508,0.508 0 0,0 30.2514,25.0444 Z "/>
+        <path d="M31.1622,24.8956 L33.0672,26.8006 A0.50798551,0.50798551 0 0,0 33.7856,26.0822 L31.8806,24.1772 A0.50798551,0.50798551 0 0,0 31.1622,24.8956 Z "/>
+        <path d="M32.9184,26.4414 L32.9184,28.3464 A0.508,0.508 0 0,0 33.9344,28.3464 L33.9344,26.4414 A0.508,0.508 0 0,0 32.9184,26.4414 Z "/>
+        <path d="M69.6214,13.1064 L72.1614,13.1064 A0.635,0.635 0 0,0 72.1614,11.8364 L69.6214,11.8364 A0.635,0.635 0 0,0 69.6214,13.1064 Z "/>
+        <path d="M71.7124,12.9204 L72.3474,13.5554 A0.63498189,0.63498189 0 1,0 73.2454,12.6574 L72.6104,12.0224 A0.63498189,0.63498189 0 1,0 71.7124,12.9204 Z "/>
+        <path d="M72.1614,13.1064 L72.1614,27.7114 A0.635,0.635 0 0,0 73.4314,27.7114 L73.4314,13.1064 A0.635,0.635 0 0,0 72.1614,13.1064 Z "/>
+        <path d="M72.3474,27.2624 L71.7124,27.8974 A0.63498189,0.63498189 0 1,0 72.6104,28.7954 L73.2454,28.1604 A0.63498189,0.63498189 0 1,0 72.3474,27.2624 Z "/>
+        <path d="M72.1614,27.7114 L69.6214,27.7114 A0.635,0.635 0 0,0 69.6214,28.9814 L72.1614,28.9814 A0.635,0.635 0 0,0 72.1614,27.7114 Z "/>
+        <path d="M6.1214,25.8318 L9.906,25.8318 A0.635,0.635 0 0,0 9.906,24.5618 L6.1214,24.5618 A0.635,0.635 0 0,0 6.1214,25.8318 Z "/>
+        <path d="M10.355,25.6458 L11.6504,24.3504 A0.63498189,0.63498189 0 0,0 10.7524,23.4524 L9.457,24.7478 A0.63498189,0.63498189 0 0,0 10.355,25.6458 Z "/>
+        <path d="M11.2014,24.5364 L13.7414,24.5364 A0.635,0.635 0 0,0 13.7414,23.2664 L11.2014,23.2664 A0.635,0.635 0 0,0 11.2014,24.5364 Z "/>
+        <path d="M41.0464,18.5928 L46.1264,18.5928 A0.4064,0.4064 0 0,0 46.1264,17.78 L41.0464,17.78 A0.4064,0.4064 0 0,0 41.0464,18.5928 Z "/>
+        <path d="M46.4138,18.4738 L47.6838,17.2038 A0.40644498,0.40644498 0 0,0 47.109,16.629 L45.839,17.899 A0.40644498,0.40644498 0 1,0 46.4138,18.4738 Z "/>
+        <path d="M0.4064,0.8128 L77.2414,0.8128 A0.4064,0.4064 0 0,0 77.2414,0 L0.4064,0 A0.4064,0.4064 0 0,0 0.4064,0.8128 Z "/>
+        <path d="M76.835,0.4064 L76.835,39.7764 A0.4064,0.4064 0 0,0 77.6478,39.7764 L77.6478,0.4064 A0.4064,0.4064 0 0,0 76.835,0.4064 Z "/>
+        <path d="M77.2414,39.37 L0.4064,39.37 A0.4064,0.4064 0 0,0 0.4064,40.1828 L77.2414,40.1828 A0.4064,0.4064 0 0,0 77.2414,39.37 Z "/>
+        <path d="M0.8128,39.7764 L0.8128,0.4064 A0.4064,0.4064 0 0,0 0,0.4064 L0,39.7764 A0.4064,0.4064 0 0,0 0.8128,39.7764 Z "/>
+        <path d="M44.8564,7.7978 L46.7614,7.7978 A0.4064,0.4064 0 0,0 46.7614,6.985 L44.8564,6.985 A0.4064,0.4064 0 0,0 44.8564,7.7978 Z "/>
+        <path d="M46.474,7.6788 L47.109,8.3138 A0.40644498,0.40644498 0 0,0 47.6838,7.739 L47.0488,7.104 A0.40644498,0.40644498 0 0,0 46.474,7.6788 Z "/>
+        <path d="M46.99,8.0264 L46.99,8.6614 A0.4064,0.4064 0 0,0 47.8028,8.6614 L47.8028,8.0264 A0.4064,0.4064 0 0,0 46.99,8.0264 Z "/>
+        <path d="M39.1414,24.3078 L44.8564,24.3078 A0.4064,0.4064 0 0,0 44.8564,23.495 L39.1414,23.495 A0.4064,0.4064 0 0,0 39.1414,24.3078 Z "/>
+        <path d="M45.201,24.1168 L46.471,22.0848 A0.40638199,0.40638199 0 0,0 45.7818,21.654 L44.5118,23.686 A0.40638199,0.40638199 0 1,0 45.201,24.1168 Z "/>
+        <path d="M46.4138,22.1568 L46.5408,22.0298 A0.40644498,0.40644498 0 1,0 45.966,21.455 L45.839,21.582 A0.40644498,0.40644498 0 1,0 46.4138,22.1568 Z "/>
+        <path d="M45.847,21.7424 L45.847,21.8694 A0.4064,0.4064 0 0,0 46.6598,21.8694 L46.6598,21.7424 A0.4064,0.4064 0 0,0 45.847,21.7424 Z "/>
+        <path d="M36.3728,28.3464 L36.3728,25.1714 A0.4064,0.4064 0 0,0 35.56,25.1714 L35.56,28.3464 A0.4064,0.4064 0 0,0 36.3728,28.3464 Z "/>
+        <path d="M36.2538,25.4588 L37.5238,24.1888 A0.40644498,0.40644498 0 0,0 36.949,23.614 L35.679,24.884 A0.40644498,0.40644498 0 0,0 36.2538,25.4588 Z "/>
+        <path d="M37.2364,24.3078 L39.1414,24.3078 A0.4064,0.4064 0 0,0 39.1414,23.495 L37.2364,23.495 A0.4064,0.4064 0 0,0 37.2364,24.3078 Z "/>
+        <path d="M12.4714,7.7978 L16.9164,7.7978 A0.4064,0.4064 0 0,0 16.9164,6.985 L12.4714,6.985 A0.4064,0.4064 0 0,0 12.4714,7.7978 Z "/>
+        <path d="M16.9164,15.4178 L21.9964,15.4178 A0.4064,0.4064 0 0,0 21.9964,14.605 L16.9164,14.605 A0.4064,0.4064 0 0,0 16.9164,15.4178 Z "/>
+        <path d="M22.2838,15.2988 L24.1888,13.3938 A0.40644498,0.40644498 0 0,0 23.614,12.819 L21.709,14.724 A0.40644498,0.40644498 0 0,0 22.2838,15.2988 Z "/>
+        <path d="M23.9014,13.5128 L31.5214,13.5128 A0.4064,0.4064 0 0,0 31.5214,12.7 L23.9014,12.7 A0.4064,0.4064 0 0,0 23.9014,13.5128 Z "/>
+        <path d="M31.234,13.3938 L32.504,14.6638 A0.40644498,0.40644498 0 1,0 33.0788,14.089 L31.8088,12.819 A0.40644498,0.40644498 0 0,0 31.234,13.3938 Z "/>
+        <path d="M32.385,14.3764 L32.385,15.0114 A0.4064,0.4064 0 0,0 33.1978,15.0114 L33.1978,14.3764 A0.4064,0.4064 0 0,0 32.385,14.3764 Z "/>
+        <path d="M29.845,15.0114 L29.845,16.9164 A0.4064,0.4064 0 0,0 30.6578,16.9164 L30.6578,15.0114 A0.4064,0.4064 0 0,0 29.845,15.0114 Z "/>
+        <path d="M29.964,17.2038 L31.234,18.4738 A0.40644498,0.40644498 0 1,0 31.8088,17.899 L30.5388,16.629 A0.40644498,0.40644498 0 1,0 29.964,17.2038 Z "/>
+        <path d="M31.5214,18.5928 L33.4264,18.5928 A0.4064,0.4064 0 0,0 33.4264,17.78 L31.5214,17.78 A0.4064,0.4064 0 0,0 31.5214,18.5928 Z "/>
+        <path d="M37.1515,14.605 L35.3314,14.605 A0.4064,0.4064 0 0,0 35.3314,15.4178 L37.1515,15.4178 A0.4064,0.4064 0 0,0 37.1515,14.605 Z "/>
+        <path d="M38.5064,14.605 L37.1515,14.605 A0.4064,0.4064 0 0,0 37.1515,15.4178 L38.5064,15.4178 A0.4064,0.4064 0 0,0 38.5064,14.605 Z "/>
+        <path d="M20.7264,26.8478 L23.2664,26.8478 A0.4064,0.4064 0 0,0 23.2664,26.035 L20.7264,26.035 A0.4064,0.4064 0 0,0 20.7264,26.8478 Z "/>
+        <path d="M23.5538,26.7288 L24.8238,25.4588 A0.40644498,0.40644498 0 1,0 24.249,24.884 L22.979,26.154 A0.40644498,0.40644498 0 1,0 23.5538,26.7288 Z "/>
+        <path d="M24.9428,25.1714 L24.9428,23.2664 A0.4064,0.4064 0 0,0 24.13,23.2664 L24.13,25.1714 A0.4064,0.4064 0 0,0 24.9428,25.1714 Z "/>
+        <path d="M24.9428,23.2664 L24.9428,21.9964 A0.4064,0.4064 0 0,0 24.13,21.9964 L24.13,23.2664 A0.4064,0.4064 0 0,0 24.9428,23.2664 Z "/>
+        <path d="M26.4414,20.4978 L34.6964,20.4978 A0.4064,0.4064 0 0,0 34.6964,19.685 L26.4414,19.685 A0.4064,0.4064 0 0,0 26.4414,20.4978 Z "/>
+        <path d="M34.9838,20.3788 L37.5238,17.8388 A0.40644498,0.40644498 0 0,0 36.949,17.264 L34.409,19.804 A0.40644498,0.40644498 0 1,0 34.9838,20.3788 Z "/>
+        <path d="M37.6428,17.5514 L37.6428,15.0963 A0.4064,0.4064 0 0,0 36.83,15.0963 L36.83,17.5514 A0.4064,0.4064 0 0,0 37.6428,17.5514 Z "/>
+        <path d="M37.5238,14.8089 L37.4389,14.724 A0.40640962,0.40640962 0 1,0 36.8642,15.2988 L36.949,15.3836 A0.40640962,0.40640962 0 0,0 37.5238,14.8089 Z "/>
+        <path d="M24.8238,22.2838 L26.7288,20.3788 A0.40644498,0.40644498 0 0,0 26.154,19.804 L24.249,21.709 A0.40644498,0.40644498 0 0,0 24.8238,22.2838 Z "/>
+        <path d="M44.8564,14.605 L38.5064,14.605 A0.4064,0.4064 0 0,0 38.5064,15.4178 L44.8564,15.4178 A0.4064,0.4064 0 0,0 44.8564,14.605 Z "/>
+        <path d="M6.542,12.4039 L6.4849,12.2897 A0.406383,0.406383 0 1,0 5.7579,12.6531 L5.815,12.7674 A0.40640535,0.40640535 0 1,0 6.542,12.4039 Z "/>
+        <path d="M46.2316,34.4206 L46.6126,34.0396 A0.50798551,0.50798551 0 1,0 45.8942,33.3212 L45.5132,33.7022 A0.50798551,0.50798551 0 0,0 46.2316,34.4206 Z "/>
+        <path d="M5.7051,12.8306 L5.8193,12.9449 A0.50798551,0.50798551 0 0,0 6.5377,12.2265 L6.4235,12.1122 A0.50798551,0.50798551 0 1,0 5.7051,12.8306 Z "/>
+        <path d="M69.6504,34.0396 L69.9806,33.7094 A0.50798551,0.50798551 0 0,0 69.2622,32.991 L68.932,33.3212 A0.50798551,0.50798551 0 0,0 69.6504,34.0396 Z "/>
+        <path d="M6.1214,11.8364 L2.9464,11.8364 A0.635,0.635 0 0,0 2.9464,13.1064 L6.1214,13.1064 A0.635,0.635 0 0,0 6.1214,11.8364 Z "/>
+        <path d="M2.4974,12.0224 L1.6084,12.9114 A0.63498189,0.63498189 0 1,0 2.5064,13.8094 L3.3954,12.9204 A0.63498189,0.63498189 0 1,0 2.4974,12.0224 Z "/>
+        <path d="M1.6084,33.6214 L2.4974,34.5104 A0.63498189,0.63498189 0 0,0 3.3954,33.6124 L2.5064,32.7234 A0.63498189,0.63498189 0 0,0 1.6084,33.6214 Z "/>
+        <path d="M2.9464,34.6964 L13.7414,34.6964 A0.635,0.635 0 0,0 13.7414,33.4264 L2.9464,33.4264 A0.635,0.635 0 0,0 2.9464,34.6964 Z "/>
+        <path d="M1.4224,13.3604 L1.4224,33.1724 A0.635,0.635 0 0,0 2.6924,33.1724 L2.6924,13.3604 A0.635,0.635 0 0,0 1.4224,13.3604 Z "/>
+        <path d="M46.1142,34.6964 L58.4521,34.6964 A0.635,0.635 0 0,0 58.4521,33.4264 L46.1142,33.4264 A0.635,0.635 0 0,0 46.1142,34.6964 Z "/>
+        <path d="M39.1414,34.6964 L46.1142,34.6964 A0.635,0.635 0 0,0 46.1142,33.4264 L39.1414,33.4264 A0.635,0.635 0 0,0 39.1414,34.6964 Z "/>
+        <path d="M27.0764,34.6964 L39.1414,34.6964 A0.635,0.635 0 0,0 39.1414,33.4264 L27.0764,33.4264 A0.635,0.635 0 0,0 27.0764,34.6964 Z "/>
+        <path d="M20.7991,34.6964 L27.0764,34.6964 A0.635,0.635 0 0,0 27.0764,33.4264 L20.7991,33.4264 A0.635,0.635 0 0,0 20.7991,34.6964 Z "/>
+        <path d="M20.7991,33.4264 L13.7414,33.4264 A0.635,0.635 0 0,0 13.7414,34.6964 L20.7991,34.6964 A0.635,0.635 0 0,0 20.7991,33.4264 Z "/>
+        <path d="M69.6214,33.4264 L58.4521,33.4264 A0.635,0.635 0 0,0 58.4521,34.6964 L69.6214,34.6964 A0.635,0.635 0 0,0 69.6214,33.4264 Z "/>
+        <path d="M57.8104,33.6804 L57.8104,34.0547 A0.635,0.635 0 0,0 59.0804,34.0547 L59.0804,33.6804 A0.635,0.635 0 0,0 57.8104,33.6804 Z "/>
+        <path d="M57.9964,34.5037 L58.0031,34.5104 A0.63498189,0.63498189 0 0,0 58.9011,33.6124 L58.8944,33.6057 A0.63498189,0.63498189 0 1,0 57.9964,34.5037 Z "/>
+        <path d="M45.6184,33.6804 L45.6184,33.9222 A0.635,0.635 0 0,0 46.8884,33.9222 L46.8884,33.6804 A0.635,0.635 0 0,0 45.6184,33.6804 Z "/>
+        <path d="M45.8044,33.4732 L45.6652,33.6124 A0.63498189,0.63498189 0 1,0 46.5632,34.5104 L46.7024,34.3712 A0.63498189,0.63498189 0 1,0 45.8044,33.4732 Z "/>
+        <path d="M20.0914,31.5214 L20.0914,33.9887 A0.635,0.635 0 0,0 21.3614,33.9887 L21.3614,31.5214 A0.635,0.635 0 0,0 20.0914,31.5214 Z "/>
+        <path d="M20.2774,34.4377 L20.3501,34.5104 A0.63498189,0.63498189 0 0,0 21.2481,33.6124 L21.1754,33.5397 A0.63498189,0.63498189 0 0,0 20.2774,34.4377 Z "/>
+        <path d="M69.6214,33.9852 L72.8726,33.9852 A0.635,0.635 0 0,0 72.8726,32.7152 L69.6214,32.7152 A0.635,0.635 0 0,0 69.6214,33.9852 Z "/>
+        <path d="M73.234,33.8723 L75.2968,32.4445 A0.63497903,0.63497903 0 1,0 74.574,31.4003 L72.5112,32.8281 A0.63497903,0.63497903 0 0,0 73.234,33.8723 Z "/>
+        <path d="M75.5704,31.9224 L75.5704,8.8954 A0.635,0.635 0 0,0 74.3004,8.8954 L74.3004,31.9224 A0.635,0.635 0 0,0 75.5704,31.9224 Z "/>
+        <path d="M75.3844,8.4464 L73.8804,6.9424 A0.63498189,0.63498189 0 0,0 72.9824,7.8404 L74.4864,9.3444 A0.63498189,0.63498189 0 0,0 75.3844,8.4464 Z "/>
+        <path d="M73.4314,6.7564 L69.6976,6.7564 A0.635,0.635 0 0,0 69.6976,8.0264 L73.4314,8.0264 A0.635,0.635 0 0,0 73.4314,6.7564 Z "/>
+        <path d="M69.2486,6.9424 L69.1724,7.0186 A0.63498189,0.63498189 0 0,0 70.0704,7.9166 L70.1466,7.8404 A0.63498189,0.63498189 0 1,0 69.2486,6.9424 Z "/>
+        <path d="M68.9864,33.3502 L68.9864,34.0614 A0.635,0.635 0 0,0 70.2564,34.0614 L70.2564,33.3502 A0.635,0.635 0 0,0 68.9864,33.3502 Z "/>
+        <path d="M69.6214,6.8326 L61.2902,6.8326 A0.635,0.635 0 0,0 61.2902,8.1026 L69.6214,8.1026 A0.635,0.635 0 0,0 69.6214,6.8326 Z "/>
+        <path d="M58.8264,8.6614 L58.8264,10.5664 A0.635,0.635 0 0,0 60.0964,10.5664 L60.0964,8.6614 A0.635,0.635 0 0,0 58.8264,8.6614 Z "/>
+        <path d="M60.9431,6.9359 L59.1143,8.1297 A0.63496716,0.63496716 0 1,0 59.8085,9.1931 L61.6373,7.9993 A0.63496716,0.63496716 0 0,0 60.9431,6.9359 Z "/>
+    </g>
+    <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <circle cx="2.3114" cy="2.9464" r="1.0135"/>
+        <circle cx="2.3114" cy="2.9464" r="1.8263"/>
+        <circle cx="74.7014" cy="2.9464" r="1.0135"/>
+        <circle cx="74.7014" cy="2.9464" r="1.8263"/>
+        <circle cx="74.7014" cy="37.2364" r="1.0135"/>
+        <circle cx="74.7014" cy="37.2364" r="1.8263"/>
+        <circle cx="2.3114" cy="37.2364" r="1.0135"/>
+        <circle cx="2.3114" cy="37.2364" r="1.8263"/>
+    </g>
+    <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="59.8678" cy="9.525" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M59.3678,14.8121 L59.3678,14.3979 L59.6607,14.105 L60.0749,14.105 L60.3678,14.3979 L60.3678,14.8121 L60.0749,15.105 L59.6607,15.105 L59.3678,14.8121 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="24.9428" cy="22.225" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M26.9828,22.4321 L26.9828,22.0179 L27.2757,21.725 L27.6899,21.725 L27.9828,22.0179 L27.9828,22.4321 L27.6899,22.725 L27.2757,22.725 L26.9828,22.4321 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="27.4828" cy="33.02" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M26.9828,30.6871 L26.9828,30.2729 L27.2757,29.98 L27.6899,29.98 L27.9828,30.2729 L27.9828,30.6871 L27.6899,30.98 L27.2757,30.98 L26.9828,30.6871 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="14.1478" cy="22.86" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="14.1478" cy="33.02" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="39.5478" cy="22.86" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="39.5478" cy="33.02" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M20.6328,30.98 L21.6328,30.98 A0.5,0.5 0 0,0 21.6328,29.98 L20.6328,29.98 A0.5,0.5 0 0,0 20.6328,30.98 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M20.6328,28.44 L21.6328,28.44 A0.5,0.5 0 0,0 21.6328,27.44 L20.6328,27.44 A0.5,0.5 0 0,0 20.6328,28.44 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M20.6328,25.9 L21.6328,25.9 A0.5,0.5 0 0,0 21.6328,24.9 L20.6328,24.9 A0.5,0.5 0 0,0 20.6328,25.9 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M46.1598,33.139 L47.1598,33.139 A0.5,0.5 0 0,0 47.1598,32.139 L46.1598,32.139 A0.5,0.5 0 0,0 46.1598,33.139 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M46.1598,21.201 L47.1598,21.201 A0.5,0.5 0 0,0 47.1598,20.201 L46.1598,20.201 A0.5,0.5 0 0,0 46.1598,21.201 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M58.3518,21.201 L59.3518,21.201 A0.5,0.5 0 0,0 59.3518,20.201 L58.3518,20.201 A0.5,0.5 0 0,0 58.3518,21.201 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M44.1278,27.17 L45.1278,27.17 A0.5,0.5 0 0,0 45.1278,26.17 L44.1278,26.17 A0.5,0.5 0 0,0 44.1278,27.17 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M58.3518,33.139 L59.3518,33.139 A0.5,0.5 0 0,0 59.3518,32.139 L58.3518,32.139 A0.5,0.5 0 0,0 58.3518,33.139 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M47.3028,7.8271 L47.3028,7.4129 L47.5957,7.12 L48.0099,7.12 L48.3028,7.4129 L48.3028,7.8271 L48.0099,8.12 L47.5957,8.12 L47.3028,7.8271 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M49.8428,7.8271 L49.8428,7.4129 L50.1357,7.12 L50.5499,7.12 L50.8428,7.4129 L50.8428,7.8271 L50.5499,8.12 L50.1357,8.12 L49.8428,7.8271 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M33.3328,27.805 L34.3328,27.805 A0.5,0.5 0 0,0 34.3328,26.805 L33.3328,26.805 A0.5,0.5 0 0,0 33.3328,27.805 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M35.8728,27.805 L36.8728,27.805 A0.5,0.5 0 0,0 36.8728,26.805 L35.8728,26.805 A0.5,0.5 0 0,0 35.8728,27.805 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M30.7928,27.805 L31.7928,27.805 A0.5,0.5 0 0,0 31.7928,26.805 L30.7928,26.805 A0.5,0.5 0 0,0 30.7928,27.805 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M38.4128,6.5571 L38.4128,6.1429 L38.7057,5.85 L39.1199,5.85 L39.4128,6.1429 L39.4128,6.5571 L39.1199,6.85 L38.7057,6.85 L38.4128,6.5571 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M38.4128,14.1771 L38.4128,13.7629 L38.7057,13.47 L39.1199,13.47 L39.4128,13.7629 L39.4128,14.1771 L39.1199,14.47 L38.7057,14.47 L38.4128,14.1771 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M30.1578,16.0821 L30.1578,15.6679 L30.4507,15.375 L30.8649,15.375 L31.1578,15.6679 L31.1578,16.0821 L30.8649,16.375 L30.4507,16.375 L30.1578,16.0821 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M30.1578,23.7021 L30.1578,23.2879 L30.4507,22.995 L30.8649,22.995 L31.1578,23.2879 L31.1578,23.7021 L30.8649,23.995 L30.4507,23.995 L30.1578,23.7021 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M44.7628,6.5571 L44.7628,6.1429 L45.0557,5.85 L45.4699,5.85 L45.7628,6.1429 L45.7628,6.5571 L45.4699,6.85 L45.0557,6.85 L44.7628,6.5571 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M44.7628,14.1771 L44.7628,13.7629 L45.0557,13.47 L45.4699,13.47 L45.7628,13.7629 L45.7628,14.1771 L45.4699,14.47 L45.0557,14.47 L44.7628,14.1771 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M12.3778,6.5571 L12.3778,6.1429 L12.6707,5.85 L13.0849,5.85 L13.3778,6.1429 L13.3778,6.5571 L13.0849,6.85 L12.6707,6.85 L12.3778,6.5571 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M12.3778,14.1771 L12.3778,13.7629 L12.6707,13.47 L13.0849,13.47 L13.3778,13.7629 L13.3778,14.1771 L13.0849,14.47 L12.6707,14.47 L12.3778,14.1771 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M16.8228,6.5571 L16.8228,6.1429 L17.1157,5.85 L17.5299,5.85 L17.8228,6.1429 L17.8228,6.5571 L17.5299,6.85 L17.1157,6.85 L16.8228,6.5571 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M16.8228,14.1771 L16.8228,13.7629 L17.1157,13.47 L17.5299,13.47 L17.8228,13.7629 L17.8228,14.1771 L17.5299,14.47 L17.1157,14.47 L16.8228,14.1771 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M21.9028,6.5571 L21.9028,6.1429 L22.1957,5.85 L22.6099,5.85 L22.9028,6.1429 L22.9028,6.5571 L22.6099,6.85 L22.1957,6.85 L21.9028,6.5571 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M21.9028,14.1771 L21.9028,13.7629 L22.1957,13.47 L22.6099,13.47 L22.9028,13.7629 L22.9028,14.1771 L22.6099,14.47 L22.1957,14.47 L21.9028,14.1771 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M33.3328,17.3521 L33.3328,16.9379 L33.6257,16.645 L34.0399,16.645 L34.3328,16.9379 L34.3328,17.3521 L34.0399,17.645 L33.6257,17.645 L33.3328,17.3521 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M40.9528,17.3521 L40.9528,16.9379 L41.2457,16.645 L41.6599,16.645 L41.9528,16.9379 L41.9528,17.3521 L41.6599,17.645 L41.2457,17.645 L40.9528,17.3521 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M41.5878,9.39 L42.5878,9.39 A0.5,0.5 0 0,0 42.5878,8.39 L41.5878,8.39 A0.5,0.5 0 0,0 41.5878,9.39 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M41.5878,11.93 L42.5878,11.93 A0.5,0.5 0 0,0 42.5878,10.93 L41.5878,10.93 A0.5,0.5 0 0,0 41.5878,11.93 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M47.3028,16.0821 L47.3028,15.6679 L47.5957,15.375 L48.0099,15.375 L48.3028,15.6679 L48.3028,16.0821 L48.0099,16.375 L47.5957,16.375 L47.3028,16.0821 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="OCTAGONP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M49.8428,16.0821 L49.8428,15.6679 L50.1357,15.375 L50.5499,15.375 L50.8428,15.6679 L50.8428,16.0821 L50.5499,16.375 L50.1357,16.375 L49.8428,16.0821 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="SQUAREP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="33.1978" cy="6.35" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="30.6578" cy="6.35" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="28.1178" cy="6.35" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="28.1178" cy="13.97" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="30.6578" cy="13.97" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="33.1978" cy="13.97" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="ROUNDP">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <circle cx="35.7378" cy="13.97" r="0.5"/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,32.8088 L70.5278,32.8088 A0.5,0.5 0 0,0 70.5278,31.8088 L69.5278,31.8088 A0.5,0.5 0 0,0 69.5278,32.8088 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,27.805 L70.5278,27.805 A0.5,0.5 0 0,0 70.5278,26.805 L69.5278,26.805 A0.5,0.5 0 0,0 69.5278,27.805 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,22.8012 L70.5278,22.8012 A0.5,0.5 0 0,0 70.5278,21.8012 L69.5278,21.8012 A0.5,0.5 0 0,0 69.5278,22.8012 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M6.0278,6.9262 L7.0278,6.9262 A0.5,0.5 0 0,0 7.0278,5.9262 L6.0278,5.9262 A0.5,0.5 0 0,0 6.0278,6.9262 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M6.0278,11.93 L7.0278,11.93 A0.5,0.5 0 0,0 7.0278,10.93 L6.0278,10.93 A0.5,0.5 0 0,0 6.0278,11.93 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M6.0278,16.9338 L7.0278,16.9338 A0.5,0.5 0 0,0 7.0278,15.9338 L6.0278,15.9338 A0.5,0.5 0 0,0 6.0278,16.9338 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,16.9338 L70.5278,16.9338 A0.5,0.5 0 0,0 70.5278,15.9338 L69.5278,15.9338 A0.5,0.5 0 0,0 69.5278,16.9338 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,11.93 L70.5278,11.93 A0.5,0.5 0 0,0 70.5278,10.93 L69.5278,10.93 A0.5,0.5 0 0,0 69.5278,11.93 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M69.5278,6.9262 L70.5278,6.9262 A0.5,0.5 0 0,0 70.5278,5.9262 L69.5278,5.9262 A0.5,0.5 0 0,0 69.5278,6.9262 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M6.0278,29.6846 L7.0278,29.6846 A0.5,0.5 0 0,0 7.0278,28.6846 L6.0278,28.6846 A0.5,0.5 0 0,0 6.0278,29.6846 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+        <g lc:blockname="LONGP100">
+            <g lc:layername="0" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+                <path d="M6.0278,24.6554 L7.0278,24.6554 A0.5,0.5 0 0,0 7.0278,23.6554 L6.0278,23.6554 A0.5,0.5 0 0,0 6.0278,24.6554 Z "/>
+            </g>
+            <g lc:layername="16" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="17" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+            <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+        </g>
+    </g>
+    <g lc:layername="18" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1"/>
+    <g lc:layername="19" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <line x1="27.0764" y1="30.2514" x2="27.0764" y2="29.0572"/>
+    </g>
+    <g lc:layername="20" lc:is_locked="false" lc:is_construction="false" fill="none" stroke="black" stroke-width="1">
+        <line x1="0.4064" y1="39.1414" x2="76.5864" y2="39.1414"/>
+        <line x1="76.5864" y1="39.1414" x2="76.5864" y2="0.7364"/>
+        <line x1="76.5864" y1="0.7364" x2="0.4064" y2="0.7364"/>
+        <line x1="0.4064" y1="0.7364" x2="0.4064" y2="39.1414"/>
+        <circle cx="2.3114" cy="2.9464" r="0.175"/>
+        <circle cx="74.7014" cy="2.9464" r="0.175"/>
+        <circle cx="74.7014" cy="37.2364" r="0.175"/>
+        <circle cx="2.3114" cy="37.2364" r="0.175"/>
+    </g>
+</svg>
