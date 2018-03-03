@@ -5,8 +5,8 @@
 #include "pins_arduino.h"
 
 
-#define sensorInterruptFlux 1  // 1 = digital pin 3
-#define SensorInFlux 3//A1
+#define sensorInterruptFlux 0  // 0 = digital pin 2
+#define SensorInFlux 2//A1
 #define timeoutFlux 500
 #define FluxCalibrateButton 5//A4
 #define FluxLed 6//A3

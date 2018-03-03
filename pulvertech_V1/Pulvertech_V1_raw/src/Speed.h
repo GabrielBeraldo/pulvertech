@@ -5,8 +5,8 @@
 //#include "pins_arduino.h"
 //#include <Wire.h>
 
-#define sensorInterruptSpeed 0  // 0 = digital pin 2
-#define SensorInSpeed 2 //A0
+#define sensorInterruptSpeed 1  // 1 = digital pin 3
+#define SensorInSpeed 3 //A0
 #define timeoutSpeed 500
 #define SpeedCalibrateButton A3
 #define SpeedLed 5
@@ -125,28 +125,6 @@ double SpeedCalibrate()
 
     so the program can associate number of pulses to the known value that is 50 meters
      */
-    /*
-     bool HIGHState = true;
-     bool LOWState = false;
-     bool LOOPState = true;
-     int PulseCount = 0;
-
-     while(LOOPState){
-         bool PulseState = digitalRead(SensorIn);
-
-         if(PulseState && HIGHState){
-           PulseCount++;
-           HIGHState = false;
-           LOWState = true;
-         }
-         else if(!PulseState && LOWState){
-           PulseCount++;
-           HIGHState = true;
-           LOWState = false;
-         }
-
-         if(digitalRead(SpeedCalibrateButton)) LOOPState=false;
-     }*/
 
     detachInterrupt(sensorInterruptSpeed);
     pulseCountSpeed = 0;

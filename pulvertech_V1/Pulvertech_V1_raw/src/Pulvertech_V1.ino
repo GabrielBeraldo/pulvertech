@@ -47,7 +47,8 @@
 #define SpeedSimulationLed 6//6
 
 #define MeterCalibrationAdd 1
-#define LiterCalibrationAdd 25
+#define PulsesPerLiterAdd 25
+//#define LiterCalibrationAdd 25
 #define MachineWidthAdd 50
 #define LiterPerHaAdd 75
 #define CalibStateAdd 0
@@ -58,14 +59,16 @@
 
 #define s_EMEA 100
 #define s_EEST 100
-#define s_Q 0.4
+#define s_Q 0.5
 
+//LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 
+int PulsesPerLiter = 813; //aproximate standard for calbration number
 double MetersPerPulse = 49212; //50000; //0.15*pow(10,6); //FURTHER INFO: done 1016 pulse conunt in first real test, so number was round for test purpouses
-double LitersPerPulse = 1230;  //real calibration number Set as Default
+double LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6); // 1230;  //real calibration number Set as Default
 int LiterPerHa = 60;
 float MachineWidth = 6.0;
-byte CalibrationKey=010; //Key that indicates that the values on eeprom was already set as default or calibrated
+byte CalibrationKey=101; //Key that indicates that the values on eeprom was already set as default or calibrated
 
 float SdData[5];
 bool SdValid = false;
@@ -90,9 +93,10 @@ void setup()
 		if(CalibStateRead != CalibrationKey)
 		{
 			eepromWrite(MeterCalibrationAdd, MetersPerPulse);
-			eepromWrite(LiterCalibrationAdd, LitersPerPulse);
+			//eepromWrite(LiterCalibrationAdd, LitersPerPulse);
 			eepromWrite(MachineWidthAdd, MachineWidth);
 			eepromWrite(LiterPerHaAdd, LiterPerHa);
+			eepromWrite(PulsesPerLiterAdd, PulsesPerLiter);
 			eepromWrite(CalibStateAdd, CalibrationKey);
 
 			TelemetrySerial.println("CalibrationKey stored");
@@ -110,12 +114,16 @@ void setup()
 	TelemetrySerial.println("Starting variables");
 	
 	eepromRead(MeterCalibrationAdd, MetersPerPulse);
-	eepromRead(LiterCalibrationAdd, LitersPerPulse);
+	//eepromRead(LiterCalibrationAdd, LitersPerPulse);
 	eepromRead(MachineWidthAdd, MachineWidth);
 	eepromRead(LiterPerHaAdd, LiterPerHa);
-	
+	eepromRead(PulsesPerLiterAdd, PulsesPerLiter);
+	LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
+
 	TelemetrySerial.print("MPP: ");
 	TelemetrySerial.println(MetersPerPulse);
+	TelemetrySerial.print("PPL: ");
+	TelemetrySerial.println(PulsesPerLiter);
 	TelemetrySerial.print("LPP: ");
 	TelemetrySerial.println(LitersPerPulse);
 	TelemetrySerial.print("MachineWidth: ");
