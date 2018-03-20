@@ -5,8 +5,8 @@
 //#include "pins_arduino.h"
 //#include <Wire.h>
 
-#define sensorInterruptSpeed 1  // 1 = digital pin 3
-#define SensorInSpeed 3 //A0
+#define sensorInterruptSpeed 0  // 1 = digital pin 3
+#define SensorInSpeed 2 //A0
 #define timeoutSpeed 500
 #define SpeedCalibrateButton A3
 #define SpeedLed 5
@@ -57,8 +57,6 @@ void SpeedSetup()
 double ReadSpeed(double MPP)
 {
 
-    /*double PulseTime=pulseIn(SensorIn, HIGH);
-    if(PulseTime<0) PulseTime*=-1;*/
     double KMPH = 0;
     if(PulseDurationSpeed > 0)
         KMPH = ((MPP) / PulseDurationSpeed) * 3.6;

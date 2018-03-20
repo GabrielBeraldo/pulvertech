@@ -3,9 +3,9 @@
 //#include "Arduino.h"
 //////////////////////////////////////////////////////////////////////////////////////
 /////Configuration of PID/////////////////////////////////////////////////////////////
-#define P_FRACTION 0.8//0.8         //0.0 - 10.0 (0.3)
-#define I_FRACTION 0.08//0.08         //0.0 - 10.0 (0.3)
-#define D_FRACTION 6.0//6.0         //0.0 - 10.0 (4.0)
+float P_FRACTION=2; //#define P_FRACTION 2//0.8         //0.0 - 10.0 (0.3)
+float I_FRACTION=0;//#define I_FRACTION 0.08//0.08         //0.0 - 10.0 (0.3)
+float D_FRACTION=0;//#define D_FRACTION 6//6.0         //0.0 - 10.0 (4.0)
 
 #define V_WINDOW 5            //10 - 1000 (25)
 #define MIN_DUTYCYCLE 1       //0 - 255 (25)
@@ -38,6 +38,7 @@ void Close(int);
 void OpenSession();
 void CloseSession();
 void ReleaseSession();
+void PID_Update_parameters(float, float, float);
 
 //////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////
@@ -53,6 +54,11 @@ void PIDSetup()
     ReleaseBridge();
 }
 
+void PID_Update_parameters(float p, float i, float d){
+    P_FRACTION = p;
+    I_FRACTION = i;
+    D_FRACTION = d;
+}
 
 int PIDControl(int FluxIn, int ADC_SetPoint)  // reads the flux sensor (between 0 and 1023)
 {

@@ -1,5 +1,6 @@
 //#define VarDebug
 #define telemetry
+#define SerialCom
 
 /*Telemetry return: SpeedVal, FluxLPM, SetPointLPM, setPoint, FeedbackFlux, duttyCicle, ValveState */
 
@@ -27,6 +28,7 @@
 #include <SPI.h>
 #include <SoftwareSerial.h>
 
+#include "Debug.h"
 #include "pins_arduino.h"
 #include "Speed.h"
 #include "Flux.h"
@@ -63,7 +65,7 @@
 
 //LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 
-int PulsesPerLiter = 813; //aproximate standard for calbration number
+int PulsesPerLiter = 2000; //813 aproximate standard for calbration number
 double MetersPerPulse = 49212; //50000; //0.15*pow(10,6); //FURTHER INFO: done 1016 pulse conunt in first real test, so number was round for test purpouses
 double LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6); // 1230;  //real calibration number Set as Default
 int LiterPerHa = 60;
@@ -81,9 +83,14 @@ SimpleKalmanFilter KF_Flux = SimpleKalmanFilter(_EMEA, _EEST, _Q);
 SimpleKalmanFilter KF_SpeedVal = SimpleKalmanFilter(s_EMEA, s_EEST, s_Q);
 
 SoftwareSerial TelemetrySerial(A4, A5); // RX, TX
+SerialCommands Scom;
 
 void setup()
 {
+
+	#ifdef SerialCom
+		Scom.begin(9600);
+	#endif
 
 	TelemetrySerial.begin(BaudRate);
 	TelemetrySerial.println("");
@@ -145,7 +152,7 @@ void loop()
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//Check for any user request /////////////////////////////////////////////////////////////
-
+	Scom.update();
 
 	if(digitalRead(SpeedSimulationButton))
 	{
@@ -190,47 +197,40 @@ void loop()
 			}
 		}
 	}
-	/*
-	if(digitalRead(FluxCalibrateButton))
-	{
-		MillisOld = millis();
-		while(digitalRead(FluxCalibrateButton))
-		{
-			if((millis() - MillisOld) >= ButtonPressTime)
-			{
-
-				TelemetrySerial.println("FluxCalibrate Start");
-				digitalWrite(FluxLed, 1);
-				while(digitalRead(FluxCalibrateButton));
-
-				LitersPerPulse = FluxCalibrate();
-				eepromWrite(LiterCalibrationAdd, LitersPerPulse);
-
-				TelemetrySerial.println(LitersPerPulse);
-				TelemetrySerial.println("FluxCalibrate end");
-				digitalWrite(FluxLed, 0);
-				MillisOld = millis();
-				while(digitalRead(FluxCalibrateButton));
-			}
-		}
-	}*/
-
+	
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//Get Variables values and calculate all needed to run the PIDControl function////////////
 
+	#ifdef SerialCom
+		PulsesPerLiter = Scom.PulsesPerLiter();
+		LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
+	#endif
+
 	float FluxLPM = ReadFlux(LitersPerPulse);
-	FluxLPM = FluxAverage(FluxLPM, 5);
+	if(FluxLPM>30) FluxLPM=30;
 	if(FluxLPM<1) FluxLPM=0;
+	FluxLPM = FluxAverage(FluxLPM, 5);
+
 
 	float SpeedVal = 0;
 
-	if(SpeedSimulationState) SpeedVal = SpeedSimulationVal;
-	else{
-		SpeedVal=ReadSpeed(MetersPerPulse);
-		SpeedVal = SpeedAverage(SpeedVal, 5);
-		SpeedVal = constrain(SpeedVal, 0, MaxSpeedVal(LiterPerHa, MachineWidth));
-		SpeedVal = KF_SpeedVal.updateEstimate(SpeedVal);
-	}
+	#ifdef SerialCom
+		SpeedVal = Scom.Speed();
+		
+		float p_frac = Scom.proporcional()/100;
+		float i_frac = Scom.integrative()/100;
+		float d_frac = Scom.derivative()/100;
+		PID_Update_parameters(p_frac, i_frac, d_frac);
+
+	#else
+		if(SpeedSimulationState) SpeedVal = SpeedSimulationVal;
+		else{
+			SpeedVal=ReadSpeed(MetersPerPulse);
+			SpeedVal = SpeedAverage(SpeedVal, 5);
+			SpeedVal = constrain(SpeedVal, 0, MaxSpeedVal(LiterPerHa, MachineWidth));
+			SpeedVal = KF_SpeedVal.updateEstimate(SpeedVal);
+		}
+	#endif
 
 	float SetPointLPM = Calculate(LiterPerHa, SpeedVal, MachineWidth); 	//L/min, km/h, meters
 	SetPointLPM = constrain(SetPointLPM, 0, 20);
@@ -261,6 +261,7 @@ void loop()
 
 		TelemetrySerial.println("Closing Valve");
 		CloseSession();
+		ReleaseBridge();
 		ValveState = false; //indicates that the valve is now closed
 	}
 	else if(minSpd && ValveState)
@@ -291,8 +292,24 @@ void loop()
 	TelemetrySerial.print(F(", "));
 	TelemetrySerial.print(duttyCicle);
 
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.println(ValveState);
+		#ifdef SerialCom
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.print(ValveState);
+
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.print(p_frac);
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.print(i_frac);
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.print(d_frac);
+
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.println(PulsesPerLiter);
+
+		#else
+			TelemetrySerial.print(F(", "));
+			TelemetrySerial.println(ValveState);
+		#endif
 
 	#endif
 
