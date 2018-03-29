@@ -11,7 +11,7 @@
 #define MetersForCalibrate5 50
 
 /////////////////////////////////////
-//interrupter functions ust be global
+//interrupter functions must be global
 
 volatile long pulseCountSpeed;
 volatile long PulseDurationSpeed = 0;

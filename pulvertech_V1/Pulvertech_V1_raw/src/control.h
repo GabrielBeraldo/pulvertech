@@ -13,9 +13,12 @@
 #define VALVE_PIN2 9
 #define VALVE_SESSION_PIN 8
 
-class Controller{
+#define StabilityCriteriaTime 5000
+#define stabilityDeadband 20
 
-    float P_FRACTION=2; //#define P_FRACTION 2//0.8         //0.0 - 10.0 (0.3)
+class ControllerClass{
+
+    float P_FRACTION=0; //#define P_FRACTION 2//0.8         //0.0 - 10.0 (0.3)
     float I_FRACTION=0;//#define I_FRACTION 0.08//0.08         //0.0 - 10.0 (0.3)
     float D_FRACTION=0;//#define D_FRACTION 6//6.0         //0.0 - 10.0 (4.0)
 
@@ -27,6 +30,10 @@ class Controller{
     int ADCdiff = 0;
     int timeDiff = 0;
 
+    bool controllerStability = false;
+    bool Stability = false;
+    unsigned long StabilityTime=0;
+
     public:
 
     void setup();
@@ -37,6 +44,8 @@ class Controller{
     void openSession();
     void closeSession();
     int controllerDuty(){return dutyCycle;};
+
+    bool stability(){return controllerStability;};
 
     float proporcional(){return P_FRACTION;};
     void proporcional(float proporcional){P_FRACTION=proporcional;};
@@ -50,14 +59,14 @@ class Controller{
 
 };
 
-void Controller::setup()
+void ControllerClass::setup()
 {
     pinMode(VALVE_PIN, OUTPUT);
     pinMode(VALVE_PIN2, OUTPUT);
     pinMode(VALVE_SESSION_PIN, OUTPUT);
 }
 
-void Controller::update(int FluxIn, int ADC_SetPoint)  // reads the flux sensor (between 0 and 1023)
+void ControllerClass::update(int FluxIn, int ADC_SetPoint)  // reads the flux sensor (between 0 and 1023)
 {
 
     ADCdiff = ADC_SetPoint - FluxIn;
@@ -97,6 +106,7 @@ void Controller::update(int FluxIn, int ADC_SetPoint)  // reads the flux sensor 
     {
         dutyCycle = 0;
         timeDiff = 0;
+        Stability=true;
     }
 
     if(abs(FluxInOld - FluxIn) < EMERGENCY_SHUTDOWN && dutyCycle == MAX_DUTYCYCLE && timeDiff > 50)
@@ -107,7 +117,9 @@ void Controller::update(int FluxIn, int ADC_SetPoint)  // reads the flux sensor 
         timeDiff = 0;
     }
     else
-    {
+    {   
+        Stability=false;
+
         if(ADCdiff > 0)
         {
             releaseBridge();
@@ -122,37 +134,47 @@ void Controller::update(int FluxIn, int ADC_SetPoint)  // reads the flux sensor 
         }
     }
 
-
+    /////////////////////////////////
+    //stability timeout
+    if(abs(ADCdiff) < stabilityDeadband){
+        if((millis()-StabilityTime)>=StabilityCriteriaTime) 
+        controllerStability=true;
+    }
+    else{
+        controllerStability=false;
+        StabilityTime=millis();
+    }
+    ///////////////////////////////////
 
     ADC_SetPointOld = ADC_SetPoint;
     FluxInOld = FluxIn;
     delay(LOOP_DELAY);
 }
 
-void Controller::releaseBridge()
+void ControllerClass::releaseBridge()
 {
     analogWrite(VALVE_PIN, 0);
     analogWrite(VALVE_PIN2, 0);
 }
 
-void Controller::open(int dutty)
+void ControllerClass::open(int dutty)
 {
     analogWrite(VALVE_PIN, 0 );
     analogWrite(VALVE_PIN2, dutty );
 }
 
-void Controller::close(int dutty)
+void ControllerClass::close(int dutty)
 {
     analogWrite(VALVE_PIN, dutty );
     analogWrite(VALVE_PIN2, 0 );
 }
 
-void Controller::openSession()
+void ControllerClass::openSession()
 {
     digitalWrite(VALVE_SESSION_PIN, 1);
 }
 
-void Controller::closeSession()
+void ControllerClass::closeSession()
 {
     digitalWrite(VALVE_SESSION_PIN, 0);
 

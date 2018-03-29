@@ -8,6 +8,9 @@ class SerialCommands {
     int i=0;
     int d=0;
 
+    int a=0;
+    bool acquisitionState=false;
+
   public:
     void begin(int baud) {Serial.begin(baud);};
     void update();
@@ -18,6 +21,9 @@ class SerialCommands {
     float proporcional(){update(); return p;};
     float integrative(){update(); return i;};
     float derivative(){update(); return d;};
+    
+    float acquisition(){return acquisitionState;};
+    void stopacquisition();
 
 };
 
@@ -53,9 +59,24 @@ void SerialCommands::update() {
         Serial.read();
         d = Serial.parseInt();
       break;
+
+      case 'a':
+      	Serial.read();
+      	a = Serial.parseInt();
+      	break;
+
     }
    
     while(Serial.available() > 0){Serial.read();}
   }
 
+
+  if(a>0) acquisitionState=true;
+  else acquisitionState=false;
+
 };
+
+void SerialCommands::stopacquisition(){
+	acquisitionState=false;
+	a=0;
+}

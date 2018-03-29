@@ -64,6 +64,12 @@
 #define s_EEST 100
 #define s_Q 0.5
 
+#define loweracquisitionSetpoint 250
+#define upperacquisitionSetpoint 500
+
+bool acquisitionFirstRun=true;
+bool acquisitionFirstStage = false;
+unsigned long acquisitionStartTime=0;
 //LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 
 int PulsesPerLiter = 2000; //813 aproximate standard for calbration number
@@ -85,8 +91,9 @@ SimpleKalmanFilter KF_SpeedVal = SimpleKalmanFilter(s_EMEA, s_EEST, s_Q);
 
 SoftwareSerial TelemetrySerial(A4, A5); // RX, TX
 SerialCommands Scom;
-Controller PID_Controller;
+ControllerClass Controller;
 SpeedClass Speed;
+FluxClass Flux;
 
 void setup()
 {
@@ -144,8 +151,8 @@ void setup()
 
 
 	Speed.setup();
-	FluxSetup();
-	PID_Controller.setup();
+	Flux.setup();
+	Controller.setup();
 
 	TelemetrySerial.println("initialization done.");
 
@@ -156,8 +163,7 @@ void loop()
 
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//Check for any user request /////////////////////////////////////////////////////////////
-	Scom.update();
-
+	/*
 	if(digitalRead(SpeedSimulationButton))
 	{
 		MillisOld = millis();
@@ -201,29 +207,32 @@ void loop()
 			}
 		}
 	}
-	
+	*/
 	//////////////////////////////////////////////////////////////////////////////////////////
 	//Get Variables values and calculate all needed to run the PIDControl function////////////
 
 	#ifdef SerialCom
+		Scom.update();
 		PulsesPerLiter = Scom.PulsesPerLiter();
 		LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 	#endif
 
-	float FluxLPM = ReadFlux(LitersPerPulse);
+	float FluxLPM = Flux.update(LitersPerPulse);
 	if(FluxLPM>30) FluxLPM=30;
 	if(FluxLPM<1) FluxLPM=0;
-	FluxLPM = FluxAverage(FluxLPM, 5);
+	FluxLPM = Flux.average(FluxLPM, 5);
 
 
 	float SpeedVal = 0;
 
 	#ifdef SerialCom
+
+		if(!Scom.acquisition())
 		SpeedVal = Scom.Speed();
 		
-		PID_Controller.proporcional(Scom.proporcional()/100);
-		PID_Controller.integrative(Scom.integrative()/100);
-		PID_Controller.derivative(Scom.derivative()/100);
+		Controller.proporcional(Scom.proporcional()/100);
+		Controller.integrative(Scom.integrative()/100);
+		Controller.derivative(Scom.derivative()/100);
 
 	#else
 		if(SpeedSimulationState) SpeedVal = SpeedSimulationVal;
@@ -245,6 +254,44 @@ void loop()
 	FeedbackFlux = KF_Flux.updateEstimate(FeedbackFlux);
 	setPoint = KF_SetPoint.updateEstimate(setPoint);
 
+
+	//########################################################################
+	
+	#ifdef SerialCom
+
+			if(Scom.acquisition()){
+
+				setPoint = loweracquisitionSetpoint;
+				SpeedVal = MinSpeed+1;
+
+				if(Controller.stability() && !acquisitionFirstStage){
+					acquisitionFirstStage=true;
+					acquisitionFirstRun=true;
+					acquisitionStartTime=millis();
+				}
+
+				if(acquisitionFirstStage){
+					
+					setPoint=upperacquisitionSetpoint;
+
+					if(!acquisitionFirstRun)
+					if(Controller.stability()){
+							Scom.stopacquisition();
+							SpeedVal=0;
+						}
+
+					acquisitionFirstRun=false;	 
+				}
+
+			}
+			else{
+
+				acquisitionStartTime=millis();
+				acquisitionFirstStage=false;
+			}
+	#endif
+	//########################################################################3
+
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 	//Apply Flux Control Routines/////////////////////////////////////////////////////////////////////
 
@@ -255,7 +302,7 @@ void loop()
 	{
 
 		TelemetrySerial.println("Opening Valve");
-		PID_Controller.openSession();
+		Controller.openSession();
 		ValveState = true; //indicates that the valve is now open
 
 	}
@@ -263,21 +310,31 @@ void loop()
 	{
 
 		TelemetrySerial.println("Closing Valve");
-		PID_Controller.closeSession();
-		PID_Controller.releaseBridge();
+		Controller.closeSession();
+		Controller.releaseBridge();
 		ValveState = false; //indicates that the valve is now closed
 	}
 	else if(minSpd && ValveState)
 	{
-		dutyCycle = PID_Controller.controllerDuty();
-		PID_Controller.update(FeedbackFlux, setPoint);
+		dutyCycle = Controller.controllerDuty();
+		Controller.update(FeedbackFlux, setPoint);
 	}
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+	if(Scom.acquisition()){
 
-	#ifdef telemetry
+	TelemetrySerial.print((millis()-acquisitionStartTime));
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(setPoint);
+	TelemetrySerial.print(F(", "));
+	TelemetrySerial.print(FeedbackFlux);
+
+	TelemetrySerial.println("");
+	}
+	else{
+		#ifdef telemetry
 
 	TelemetrySerial.print(SpeedVal);
 
@@ -301,11 +358,11 @@ void loop()
 			TelemetrySerial.print(ValveState);
 
 			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(PID_Controller.proporcional());
+			TelemetrySerial.print(Controller.proporcional());
 			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(PID_Controller.integrative());
+			TelemetrySerial.print(Controller.integrative());
 			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(PID_Controller.derivative());
+			TelemetrySerial.print(Controller.derivative());
 
 			TelemetrySerial.print(F(", "));
 			TelemetrySerial.println(PulsesPerLiter);
@@ -318,5 +375,7 @@ void loop()
 	#endif
 
 
+	}
+	
 
 }
