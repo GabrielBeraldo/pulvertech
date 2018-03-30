@@ -1,4 +1,4 @@
-//#define VarDebug
+//test //#define VarDebug
 
 #define telemetry
 #define SerialCom
