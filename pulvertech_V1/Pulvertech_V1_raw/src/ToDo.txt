@@ -55,11 +55,7 @@ resolver com chaves manuais - predispor para mais seções
 -refinamentos gerais
 	-variaveis para telemetria
 	-eliminar trechos inutilizados
-	-eliminar redundancias
 	-conferir a necessidade dos tipos de variável
 	-conferir parametros das funções(adequar aos tipos das variáveis)
-
-
-
 
 ##############################################################################

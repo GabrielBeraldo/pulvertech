@@ -1,0 +1,294 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"loo",
+				"loopTime"
+			],
+			[
+				"max",
+				"maxDuration"
+			],
+			[
+				"min",
+				"minDuration"
+			],
+			[
+				"duty",
+				"dutyRaw"
+			],
+			[
+				"updta",
+				"updateOuputs"
+			],
+			[
+				"random",
+				"randomUpdate"
+			],
+			[
+				"ra",
+				"randomDuration"
+			],
+			[
+				"pwm",
+				"pwm_1"
+			],
+			[
+				"pw",
+				"pwm_2"
+			],
+			[
+				"digital",
+				"digitalWrite\tDeviot digitalWrite"
+			],
+			[
+				"analog",
+				"analogWrite\tDeviot analogWrite"
+			],
+			[
+				"Pulse",
+				"pulseCount"
+			],
+			[
+				"millis",
+				"millisOld"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"c",
+				"Set Syntax: C"
+			],
+			[
+				"gcode",
+				"Set Syntax: G-code"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"theme",
+				"UI: Select Color Scheme"
+			],
+			[
+				"nfo",
+				"Set Syntax: NFO"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instap",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/GABRIE~1/AppData/Local/Temp/Deviot/ModelResponseAcquisition/platformio.ini",
+		"/C/Users/gabriel beraldo/Google Drive/pulvertech/Tests/ModelResponseAcquisition/ModelResponseAcquisition.ino",
+		"/C/Users/gabriel beraldo/Google Drive/berabot hypercube/Marlin-1.1.9/Marlin/Marlin.h",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/routines/initModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/routines/flushModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/50Ml/validateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/50Ml/calibrateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/50Ml/3B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/50Ml/2B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/50Ml/1B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/25Ml/validateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/25Ml/calibrateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/25Ml/3B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/25Ml/2B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo50/25Ml/1B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/routines/flushModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/routines/initModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/5Ml/calibrateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/5Ml/3B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/5Ml/2B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/5Ml/1B_50ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/Procedures/Modulo20/5Ml/validateModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/pulvertech/Tests/ModelResponseAcquisition/Flux.h",
+		"/C/Users/gabriel beraldo/Downloads/FlowMeterDIY.ino",
+		"/C/Users/gabriel beraldo/Google Drive/pulvertech/pulvertech_V1/Pulvertech_V1_raw/src/Pulvertech_V1.cpp",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/gcodes/routines/3B_25ML.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/gcodes/routines/initModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/gcodes/routines/fillPumpModule.gcode",
+		"/C/Users/gabriel beraldo/Desktop/hbridgeTest/hbridgeTest.ino",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/gcodes/initModule.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/firmware maquinas/gcodes/fillPumpModule.gcode",
+		"/C/Program Files/flatcam/FlatCAMApp.py",
+		"/C/Users/gabriel beraldo/Downloads/treefrog_45_cut.stl",
+		"/C/Program Files/flatcam/README.md",
+		"/C/Users/gabriel beraldo/Downloads/F6XUBS4I9V6RQQC.ino",
+		"/C/Users/gabriel beraldo/Downloads/CHEPCalibrationCube.stl",
+		"/C/Users/gabriel beraldo/Downloads/Flexi-Rex-improved.stl",
+		"/C/Users/gabriel beraldo/Google Drive/opentx-2.2/README.md",
+		"/C/Users/gabriel beraldo/Google Drive/opentx-2.2/launchpad/readme.md",
+		"/D/test1.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/Firmware FolgerToso/compact_direct_drive_extruder.scad",
+		"/C/Users/gabriel beraldo/Google Drive/Firmware FolgerToso/Marlin-1.1.x/Marlin/Configuration.h",
+		"/C/Program Files/KiCad/bin/easy_install-script.py",
+		"/D/initSeringa.gcode",
+		"/C/Users/gabriel beraldo/Google Drive/berabot hypercube/Marlin-1.1.9/Marlin/pins_RAMPS.h",
+		"/D/trigger.gcode",
+		"/C/Users/gabriel beraldo/Desktop/pokemon.gcode",
+		"/C/Users/gabriel beraldo/Desktop/MKS-TFT/MKS_TFT_CNC/README",
+		"/C/Users/gabriel beraldo/Downloads/Dirt.3-SKIDROW/skidrow.nfo",
+		"/C/Users/gabriel beraldo/Downloads/Assassins.Creed.Brotherhood-SKIDROW/skidrow.nfo"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "platformio.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 254.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

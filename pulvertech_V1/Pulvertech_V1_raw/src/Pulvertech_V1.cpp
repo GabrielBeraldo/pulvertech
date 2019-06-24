@@ -1,7 +1,3 @@
-//test //#define VarDebug
-
-#define telemetry
-#define SerialCom
 
 /*Telemetry return: SpeedVal, FluxLPM, SetPointLPM, setPoint, FeedbackFlux, dutyCycle, ValveState */
 
@@ -18,6 +14,9 @@
 *	Callibration Speed 	A3
 *	Speed Led			5
 *
+*	Telemetry RX		A4
+*	Telemetry TX		A5
+*
 *	SD_CS 				D4
 *	SD_SCK				D13
 *	SD_MOSI				D12
@@ -29,6 +28,7 @@
 #include <SPI.h>
 #include <SoftwareSerial.h>
 
+#include "Configurations.h"
 #include "Debug.h"
 #include "pins_arduino.h"
 #include "Speed.h"
@@ -37,35 +37,8 @@
 #include "calculus.h"
 #include "KalmanFilter.h"
 #include "EEPROM_ANY.h"
-#include "SDcard.h"
+//#include "SDcard.h"
 //#include "BoardAuth.h"
-
-
-#define BaudRate 9600
-#define MinSpeed 2.0
-#define DelayValve 3000 //3 seconds for open/close the section valve
-#define ButtonPressTime 1000
-#define SpeedSimulationVal 5
-#define SpeedSimulationButton A2 //5
-#define SpeedSimulationLed 6//6
-
-#define MeterCalibrationAdd 1
-#define PulsesPerLiterAdd 25
-//#define LiterCalibrationAdd 25
-#define MachineWidthAdd 50
-#define LiterPerHaAdd 75
-#define CalibStateAdd 0
-
-#define _EMEA 100
-#define _EEST 100
-#define _Q 0.1
-
-#define s_EMEA 100
-#define s_EEST 100
-#define s_Q 0.5
-
-#define loweracquisitionSetpoint 250
-#define upperacquisitionSetpoint 500
 
 bool acquisitionFirstRun=true;
 bool acquisitionFirstStage = false;
@@ -334,7 +307,7 @@ void loop()
 	TelemetrySerial.println("");
 	}
 	else{
-		#ifdef telemetry
+	#ifdef telemetry
 
 	TelemetrySerial.print(SpeedVal);
 

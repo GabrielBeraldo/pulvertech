@@ -1,0 +1,63 @@
+Telemetry Viewer File Format v0.5
+
+GUI Settings:
+
+	tile column count = 6
+	tile row count = 6
+	show plot tooltips = true
+	smooth scrolling = true
+	opengl antialiasing = true
+	show fps and period = false
+	chart index for benchmarks = -1
+
+Communication Settings:
+
+	port = UART: COM13
+	uart baud rate = 9600
+	tcp/udp port number = 8080
+	packet type = CSV
+	sample rate = 90
+
+5 Data Structure Locations:
+
+	location = 0
+	processor index = -1
+	name = fluxo
+	color = 0x0000CC
+	unit = l/m
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 1
+	processor index = -1
+	name = setPoint
+	color = 0xFF0000
+	unit = l/m
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 2
+	processor index = -1
+	name = duty
+	color = 0x339900
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 3
+	processor index = -1
+	name = Stability
+	color = 0x00CCCC
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 4
+	processor index = -1
+	name = frequency
+	color = 0xCC00CC
+	unit = 
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+0 Charts:
