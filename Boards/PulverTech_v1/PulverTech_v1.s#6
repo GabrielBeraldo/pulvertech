@@ -13645,8 +13645,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="X3" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/3" device=""/>
 <part name="ICSP" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA03-2" device=""/>
-<part name="TELEMETRY" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device=""/>
 <part name="IHM" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device=""/>
+<part name="TELEMETRY" library="con-lstb" library_urn="urn:adsk.eagle:library:162" deviceset="MA04-1" device=""/>
 <part name="X4" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/3" device=""/>
 <part name="X5" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/3" device=""/>
 <part name="X1" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2" device=""/>
@@ -13707,8 +13707,8 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <instance part="X3" gate="-2" x="335.28" y="109.22" rot="R270"/>
 <instance part="X3" gate="-3" x="330.2" y="109.22" rot="R270"/>
 <instance part="ICSP" gate="1" x="264.16" y="30.48" rot="R180"/>
-<instance part="TELEMETRY" gate="1" x="320.04" y="30.48" rot="R270"/>
-<instance part="IHM" gate="1" x="350.52" y="30.48" rot="R270"/>
+<instance part="IHM" gate="1" x="320.04" y="30.48" rot="R270"/>
+<instance part="TELEMETRY" gate="1" x="350.52" y="30.48" rot="R270"/>
 <instance part="X4" gate="-1" x="297.18" y="157.48"/>
 <instance part="X4" gate="-2" x="297.18" y="152.4"/>
 <instance part="X4" gate="-3" x="297.18" y="147.32"/>
@@ -13764,12 +13764,12 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <label x="274.32" y="33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TELEMETRY" gate="1" pin="4"/>
+<pinref part="IHM" gate="1" pin="4"/>
 <wire x1="322.58" y1="22.86" x2="322.58" y2="12.7" width="0.1524" layer="91"/>
 <label x="322.58" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="IHM" gate="1" pin="4"/>
+<pinref part="TELEMETRY" gate="1" pin="4"/>
 <wire x1="353.06" y1="22.86" x2="353.06" y2="12.7" width="0.1524" layer="91"/>
 <label x="353.06" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -13884,12 +13884,12 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <label x="274.32" y="27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TELEMETRY" gate="1" pin="3"/>
+<pinref part="IHM" gate="1" pin="3"/>
 <wire x1="320.04" y1="22.86" x2="320.04" y2="12.7" width="0.1524" layer="91"/>
 <label x="320.04" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="IHM" gate="1" pin="3"/>
+<pinref part="TELEMETRY" gate="1" pin="3"/>
 <wire x1="350.52" y1="22.86" x2="350.52" y2="12.7" width="0.1524" layer="91"/>
 <label x="350.52" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -13919,25 +13919,18 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <net name="RESET" class="0">
 <segment>
 <label x="205.74" y="25.4" size="1.778" layer="95"/>
-<label x="269.24" y="63.5" size="1.778" layer="95"/>
 <pinref part="R8" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="30.48" x2="233.68" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="25.4" x2="223.52" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="P1" gate="G$1" pin="P@1"/>
-<wire x1="226.06" y1="15.24" x2="223.52" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="223.52" y1="15.24" x2="223.52" y2="25.4" width="0.1524" layer="91"/>
-<junction x="226.06" y="15.24"/>
-<wire x1="205.74" y1="25.4" x2="223.52" y2="25.4" width="0.1524" layer="91"/>
-<junction x="223.52" y="25.4"/>
+<wire x1="233.68" y1="25.4" x2="226.06" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="P1" gate="G$1" pin="P"/>
+<wire x1="226.06" y1="25.4" x2="205.74" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="17.78" x2="226.06" y2="25.4" width="0.1524" layer="91"/>
+<junction x="226.06" y="25.4"/>
 </segment>
 <segment>
 <pinref part="U1" gate="A" pin="PC6"/>
 <wire x1="266.7" y1="63.5" x2="274.32" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="ICSP" gate="1" pin="5"/>
-<wire x1="256.54" y1="27.94" x2="251.46" y2="27.94" width="0.1524" layer="91"/>
-<label x="248.92" y="27.94" size="1.778" layer="95"/>
+<label x="269.24" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="U_RX" class="0">
@@ -13947,7 +13940,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <label x="269.24" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TELEMETRY" gate="1" pin="2"/>
+<pinref part="IHM" gate="1" pin="2"/>
 <wire x1="317.5" y1="22.86" x2="317.5" y2="12.7" width="0.1524" layer="91"/>
 <label x="317.5" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -13959,7 +13952,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <label x="269.24" y="99.06" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="TELEMETRY" gate="1" pin="1"/>
+<pinref part="IHM" gate="1" pin="1"/>
 <wire x1="314.96" y1="22.86" x2="314.96" y2="12.7" width="0.1524" layer="91"/>
 <label x="314.96" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -14421,7 +14414,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 </net>
 <net name="SOFT_TX" class="0">
 <segment>
-<pinref part="IHM" gate="1" pin="1"/>
+<pinref part="TELEMETRY" gate="1" pin="1"/>
 <wire x1="345.44" y1="22.86" x2="345.44" y2="12.7" width="0.1524" layer="91"/>
 <label x="345.44" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -14433,7 +14426,7 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 </net>
 <net name="SOFT_RX" class="0">
 <segment>
-<pinref part="IHM" gate="1" pin="2"/>
+<pinref part="TELEMETRY" gate="1" pin="2"/>
 <wire x1="347.98" y1="22.86" x2="347.98" y2="12.7" width="0.1524" layer="91"/>
 <label x="347.98" y="12.7" size="1.778" layer="95" rot="R90"/>
 </segment>
@@ -14448,6 +14441,18 @@ Source: http://www.irf.com/product-info/datasheets/data/irf9530.pdf</description
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="X4" gate="-1" pin="KL"/>
 <wire x1="317.5" y1="157.48" x2="302.26" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="RST_ICSP" class="0">
+<segment>
+<label x="215.9" y="15.24" size="1.778" layer="95"/>
+<pinref part="P1" gate="G$1" pin="P@1"/>
+<wire x1="215.9" y1="15.24" x2="226.06" y2="15.24" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="ICSP" gate="1" pin="5"/>
+<wire x1="256.54" y1="27.94" x2="251.46" y2="27.94" width="0.1524" layer="91"/>
+<label x="248.92" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
