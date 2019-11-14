@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
-#define sensorInterruptFlux 1  // 0 = digital pin 2
-#define SensorInFlux 3//A1
+#define sensorInterruptFlux 0  // 0 = digital pin 2
+#define SensorInFlux 2//A1
 
 /////////////////////////////////////
 //interrupter functions ust be global

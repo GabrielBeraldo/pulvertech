@@ -18,7 +18,7 @@ class SerialCommands {
     int Speed(){ return kmh; };
     int PulsesPerLiter(){return ppl;};
 
-    float proporcional(){update(); return p;};
+    float proportional(){update(); return p;};
     float integrative(){update(); return i;};
     float derivative(){update(); return d;};
     

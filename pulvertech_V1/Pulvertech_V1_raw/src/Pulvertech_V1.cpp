@@ -37,241 +37,139 @@
 #include "calculus.h"
 #include "KalmanFilter.h"
 #include "EEPROM_ANY.h"
-//#include "SDcard.h"
-//#include "BoardAuth.h"
+#include "display.h"
 
 bool acquisitionFirstRun=true;
 bool acquisitionFirstStage = false;
 unsigned long acquisitionStartTime=0;
-//LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 
-int PulsesPerLiter = 2000; //813 aproximate standard for calbration number
+float PulsesPerLiter = 450.0; //nominal value from fluxometer
 float PulsesPerMeter = 20.32; //50000; //0.15*pow(10,6); //FURTHER INFO: done 1016 pulse conunt in first real test, so number was round for test purpouses
-double LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6); // 1230;  //real calibration number Set as Default
-int LiterPerHa = 60;
-float MachineWidth = 6.0;
-byte CalibrationKey=101; //Key that indicates that the values on eeprom was already set as default or calibrated
+float LiterPerHa = 60.0;
+float MachineWidth = 6.5;
+byte CalibrationKey= 105; //Key that indicates that the values on eeprom was already set as default or calibrated
 
-float SdData[5];
-bool SdValid = false;
+float Proportional	= 0.7;
+float Integrative	= 0.3;
+float Derivative	= 180;
+
 bool ValveState = true;
 bool SpeedSimulationState = false;
-unsigned long MillisOld = 0;
+unsigned long lastUpdate = millis();
 
-SimpleKalmanFilter KF_SetPoint = SimpleKalmanFilter(_EMEA, _EEST, _Q);
-SimpleKalmanFilter KF_Flux = SimpleKalmanFilter(_EMEA, _EEST, _Q);
-SimpleKalmanFilter KF_SpeedVal = SimpleKalmanFilter(s_EMEA, s_EEST, s_Q);
+float SpeedVal = 0.0;
+float FluxLPM = 0.0;
+float SetPointLPM = 0.0;
+
+String telemetryBuffer = "";
+
+SimpleKalmanFilter KF_SetPoint 	= SimpleKalmanFilter(_EMEA, _EEST, _Q);
+SimpleKalmanFilter KF_Flux 		= SimpleKalmanFilter(_EMEA, _EEST, _Q);
+SimpleKalmanFilter KF_SpeedVal 	= SimpleKalmanFilter(s_EMEA, s_EEST, s_Q);
 
 SoftwareSerial TelemetrySerial(A4, A5); // RX, TX
-SerialCommands Scom;
+
 ControllerClass Controller;
 SpeedClass Speed;
 FluxClass Flux;
+nextionDisplay Display;
 
-void setup()
-{
+void eepromWriteParameters(){
 
-	#ifdef SerialCom
-		Scom.begin(9600);
-	#endif
+	eepromWrite(MeterCalibrationAdd, PulsesPerMeter);
+	eepromWrite(MachineWidthAdd, MachineWidth);
+	eepromWrite(LiterPerHaAdd, LiterPerHa);
+	eepromWrite(PulsesPerLiterAdd, PulsesPerLiter);
+	eepromWrite(CalibStateAdd, CalibrationKey);
 
-	TelemetrySerial.begin(BaudRate);
-	TelemetrySerial.println("");
+	eepromWrite(ProportionalAdd, Proportional);
+	eepromWrite(IntegrativeAdd, Integrative);
+	eepromWrite(DerivativeAdd, Derivative);
 
-		//////////////////////////////////////////////////////////////////
-		//Test if calibration was set as valid(first boot), in case it's not, store default values and set as valid values
-		byte CalibStateRead = EEPROM.read(0);
-		if(CalibStateRead != CalibrationKey)
-		{
-			eepromWrite(MeterCalibrationAdd, PulsesPerMeter);
-			//eepromWrite(LiterCalibrationAdd, LitersPerPulse);
-			eepromWrite(MachineWidthAdd, MachineWidth);
-			eepromWrite(LiterPerHaAdd, LiterPerHa);
-			eepromWrite(PulsesPerLiterAdd, PulsesPerLiter);
-			eepromWrite(CalibStateAdd, CalibrationKey);
 
-			TelemetrySerial.println("CalibrationKey stored");
-			TelemetrySerial.println(EEPROM.read(0));
+	TelemetrySerial.println("Calibration stored");
+	TelemetrySerial.println(EEPROM.read(0));
+}
 
-		}
-		else TelemetrySerial.println("Ok EEPROM Key");
-		////////////////////////////////////////////////////////////////
-	
-	
+void eepromReadParameters(){
 
-	pinMode(SpeedSimulationButton, INPUT);
-	pinMode(SpeedSimulationLed, OUTPUT);
-
-	TelemetrySerial.println("Starting variables");
-	
 	eepromRead(MeterCalibrationAdd, PulsesPerMeter);
-	//eepromRead(LiterCalibrationAdd, LitersPerPulse);
 	eepromRead(MachineWidthAdd, MachineWidth);
 	eepromRead(LiterPerHaAdd, LiterPerHa);
 	eepromRead(PulsesPerLiterAdd, PulsesPerLiter);
-	LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
 
+	eepromRead(ProportionalAdd, Proportional);
+	eepromRead(IntegrativeAdd, Integrative);
+	eepromRead(DerivativeAdd, Derivative);
+
+}
+
+void storedParameters(){
+	
 	TelemetrySerial.print("PPM: ");
 	TelemetrySerial.println(PulsesPerMeter);
 	TelemetrySerial.print("PPL: ");
 	TelemetrySerial.println(PulsesPerLiter);
-	TelemetrySerial.print("LPP: ");
-	TelemetrySerial.println(LitersPerPulse);
 	TelemetrySerial.print("MachineWidth: ");
 	TelemetrySerial.println(MachineWidth);
 	TelemetrySerial.print("LiterPerHa: ");
 	TelemetrySerial.println(LiterPerHa);
 
-
-	Speed.setup();
-	Flux.setup();
-	Controller.setup();
-
-	TelemetrySerial.println("initialization done.");
+	TelemetrySerial.print("Proportional: ");
+	TelemetrySerial.println(Proportional);
+	TelemetrySerial.print("Integrative: ");
+	TelemetrySerial.println(Integrative);
+	TelemetrySerial.print("Derivative: ");
+	TelemetrySerial.println(Derivative);
 
 }
 
-void loop()
-{
+void controlRoutine(){
+	//=================================================
+	//Get Variables values and calculate all needed to run the PIDControl function
 
-	//////////////////////////////////////////////////////////////////////////////////////////
-	//Check for any user request /////////////////////////////////////////////////////////////
-	/*
-	if(digitalRead(SpeedSimulationButton))
-	{
-		MillisOld = millis();
-
-		while(digitalRead(SpeedSimulationButton))
-		{
-			if((millis() - MillisOld) >= ButtonPressTime)
-			{
-				SpeedSimulationState = !SpeedSimulationState;
-				digitalWrite(SpeedSimulationLed,SpeedSimulationState);
-
-				TelemetrySerial.print("SpeedSimulation set as: ");
-				TelemetrySerial.println(SpeedSimulationState);
-
-				while(digitalRead(SpeedSimulationButton));
-			}
-		}
-	}
-
-	if(digitalRead(SpeedCalibrateButton))
-	{
-		MillisOld = millis();
-
-		while(digitalRead(SpeedCalibrateButton))
-		{
-			if((millis() - MillisOld) >= ButtonPressTime)
-			{
-
-				TelemetrySerial.println("SpeedCalibrate Start");
-				digitalWrite(SpeedLed, 1);
-				while(digitalRead(SpeedCalibrateButton));
-
-				PulsesPerMeter = Speed.calibrate();
-				eepromWrite(MeterCalibrationAdd, PulsesPerMeter);
-
-				TelemetrySerial.println(PulsesPerMeter);
-				TelemetrySerial.println("SpeedCalibrate end");
-				digitalWrite(SpeedLed, 0);
-				MillisOld = millis();
-				while(digitalRead(SpeedCalibrateButton));
-			}
-		}
-	}
-	*/
-	//////////////////////////////////////////////////////////////////////////////////////////
-	//Get Variables values and calculate all needed to run the PIDControl function////////////
-
-	#ifdef SerialCom
-		Scom.update();
-		PulsesPerLiter = Scom.PulsesPerLiter();
-		LitersPerPulse = (1.00 / PulsesPerLiter) * pow(10, 6);
-	#endif
-
-	float FluxLPM = Flux.update(LitersPerPulse);
+	//=================================================
+	//flux
+	FluxLPM = Flux.update(PulsesPerLiter/100);
 	if(FluxLPM>30) FluxLPM=30;
 	if(FluxLPM<1) FluxLPM=0;
 	FluxLPM = Flux.average(FluxLPM, 5);
-
-
-	float SpeedVal = 0;
-
-	#ifdef SerialCom
-
-		if(!Scom.acquisition())
-		SpeedVal = Scom.Speed();
+	//=================================================
+	
+	//=================================================
+	//speed
 		
-		Controller.proporcional(Scom.proporcional()/100);
-		Controller.integrative(Scom.integrative()/100);
-		Controller.derivative(Scom.derivative()/100);
+	if(Display.Simulation()){
+		SpeedVal = Display.GetSimSpeed();
+	}
+	else{	
+		SpeedVal = Speed.update(PulsesPerMeter);
+		SpeedVal = Speed.average(SpeedVal, 5);
+		SpeedVal = constrain(SpeedVal, 0, MaxSpeedVal(LiterPerHa, MachineWidth));
+		SpeedVal = KF_SpeedVal.updateEstimate(SpeedVal);
+	}
+	//=================================================
 
-	#else
-		if(SpeedSimulationState) SpeedVal = SpeedSimulationVal;
-		else{
-			SpeedVal = Speed.update(PulsesPerMeter);
-			SpeedVal = Speed.average(SpeedVal, 5);
-			SpeedVal = constrain(SpeedVal, 0, MaxSpeedVal(LiterPerHa, MachineWidth));
-			SpeedVal = KF_SpeedVal.updateEstimate(SpeedVal);
-		}
-	#endif
-
-	float SetPointLPM = Calculate(LiterPerHa, SpeedVal, MachineWidth); 	//L/min, km/h, meters
+	//=================================================
+	//setpoint
+	SetPointLPM = Calculate(LiterPerHa, SpeedVal, MachineWidth); 	//L/min, km/h, meters
 	SetPointLPM = constrain(SetPointLPM, 0, 20);
 
-	float setPoint = convert2SetPoint(SetPointLPM);              			//convert liter per min into setPoint, going from 0 to 1023(10bits)
-	float FeedbackFlux = convert2SetPoint(FluxLPM);
+	int setPoint = convert2SetPoint(SetPointLPM);              			//convert liter per min into setPoint, going from 0 to 1023(10bits)
+	int FeedbackFlux = convert2SetPoint(FluxLPM);
 
 
 	FeedbackFlux = KF_Flux.updateEstimate(FeedbackFlux);
 	setPoint = KF_SetPoint.updateEstimate(setPoint);
-
-
-	//########################################################################
 	
-	#ifdef SerialCom
-
-			if(Scom.acquisition()){
-
-				setPoint = loweracquisitionSetpoint;
-				SpeedVal = MinSpeed+1;
-
-				if(Controller.stability() && !acquisitionFirstStage){
-					acquisitionFirstStage=true;
-					acquisitionFirstRun=true;
-					acquisitionStartTime=millis();
-				}
-
-				if(acquisitionFirstStage){
-					
-					setPoint=upperacquisitionSetpoint;
-
-					if(!acquisitionFirstRun)
-					if(Controller.stability()){
-							Scom.stopacquisition();
-							SpeedVal=0;
-						}
-
-					acquisitionFirstRun=false;	 
-				}
-
-			}
-			else{
-
-				acquisitionStartTime=millis();
-				acquisitionFirstStage=false;
-			}
-	#endif
-	//########################################################################3
-
-	//////////////////////////////////////////////////////////////////////////////////////////////////
-	//Apply Flux Control Routines/////////////////////////////////////////////////////////////////////
-
 	bool minSpd = Speed.testMin(SpeedVal, MinSpeed);
 	int dutyCycle = 0;
+	//=================================================
+	
+	//=================================================
+	//Apply Flux Control Routines
 
-	if(minSpd  && !ValveState) //tests if the speed is higher then min speed and the valve is closed, then open it
+	if(minSpd  && !ValveState && Display.Application() ) //tests if the speed is higher then min speed and the valve is closed, then open it
 	{
 
 		TelemetrySerial.println("Opening Valve");
@@ -279,7 +177,7 @@ void loop()
 		ValveState = true; //indicates that the valve is now open
 
 	}
-	else if (!minSpd && ValveState) //tests if the speed is smaller then min speed and the valve is open, then close it
+	else if ((!minSpd && ValveState) || (!Display.Application() && ValveState)) //tests if the speed is smaller then min speed and the valve is open, then close it
 	{
 
 		TelemetrySerial.println("Closing Valve");
@@ -287,68 +185,111 @@ void loop()
 		Controller.releaseBridge();
 		ValveState = false; //indicates that the valve is now closed
 	}
-	else if(minSpd && ValveState)
+	else if(minSpd && ValveState && Display.Application())
 	{
 		dutyCycle = Controller.controllerDuty();
 		Controller.update(FeedbackFlux, setPoint);
 	}
-	//////////////////////////////////////////////////////////////////////////////////////////////////
-	//////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	if(Scom.acquisition()){
-
-	TelemetrySerial.print((millis()-acquisitionStartTime));
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(setPoint);
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(FeedbackFlux);
-
-	TelemetrySerial.println("");
-	}
-	else{
 	#ifdef telemetry
+		float Ts = ((millis()-lastUpdate))/1000.00;
 
-	TelemetrySerial.print(SpeedVal);
+		telemetryBuffer = String(SpeedVal) + ", " 
+						+ String(FluxLPM) + ", " 
+						+ String(SetPointLPM) + ", " 
+						+ String(setPoint) + ", " 
+						+ String(FeedbackFlux) + ", " 
+						+ String(dutyCycle) + ", " 
+						+ String(ValveState) + ", " 
+						+ String(Ts);
 
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(FluxLPM);
-
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(SetPointLPM);
-
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(setPoint);
-
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(FeedbackFlux);
-
-	TelemetrySerial.print(F(", "));
-	TelemetrySerial.print(dutyCycle);
-
-		#ifdef SerialCom
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(ValveState);
-
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(Controller.proporcional());
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(Controller.integrative());
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.print(Controller.derivative());
-
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.println(PulsesPerLiter);
-
-		#else
-			TelemetrySerial.print(F(", "));
-			TelemetrySerial.println(ValveState);
+		#if !SILENT_TELEMETRY
+			TelemetrySerial.println(telemetryBuffer);
 		#endif
-
 	#endif
 
+}
 
+void updateDisplayValues(){
+
+	int SpeedVal_toDisplay 		= SpeedVal*10;
+	int FluxLPM_toDisplay		= FluxLPM*10;
+	int SetPointLPM_toDisplay	= SetPointLPM*10;
+	int controllerStability 	= Controller.stability()? 1 : 0;
+	int simulationState 		= Display.Simulation()? 1 : 0;
+	int displayApplicationState = Display.Application()? 1 : 0;
+
+	Display.sendCmd("Main.speed.val=" 		+ String(SpeedVal_toDisplay));
+	Display.sendCmd("Main.flux.val=" 		+ String(FluxLPM_toDisplay));
+	Display.sendCmd("Main.setPoint.val=" 	+ String(SetPointLPM_toDisplay));
+	Display.sendCmd("Main.stability.val=" 	+ String(controllerStability));
+	Display.sendCmd("Main.contState.val=" 	+ String(displayApplicationState));
+	Display.sendCmd("Main.simState.val=" 	+ String(simulationState));
+
+}
+
+void setup()
+{
+
+	TelemetrySerial.begin(BaudRate);
+	TelemetrySerial.println("");
+
+	//////////////////////////////////////////////////////////////////
+	//Test if calibration was set as valid(first boot), in case it's not, store default values and set as valid values
+	byte CalibStateRead = EEPROM.read(0);
+	if(CalibStateRead != CalibrationKey) eepromWriteParameters();
+	else TelemetrySerial.println("Ok EEPROM Key");
+	////////////////////////////////////////////////////////////////
+	
+	eepromReadParameters();
+	storedParameters();
+
+	Speed.setup();
+	Flux.setup();
+	Controller.setup(Proportional, Integrative, Derivative);
+	Display.setup(PulsesPerLiter, PulsesPerMeter, LiterPerHa, MachineWidth, Controller.proportional(), Controller.integrative(), Controller.derivative());
+
+
+	TelemetrySerial.println("initialization done.");
+
+	lastUpdate = millis();
+}
+
+void loop()
+{
+
+	String received = Display.updateInput();
+	//if(received.length()>0) TelemetrySerial.println(received);
+	
+	if(Display.available()){
+
+		PulsesPerLiter	= Display.GetPPL();
+		PulsesPerMeter	= Display.GetPPM();
+		LiterPerHa		= Display.GetLPHa();
+		MachineWidth	= Display.GetmWidth();
+
+		Proportional	= Display.GetProportional();
+		Integrative 	= Display.GetIntegrative();
+		Derivative		= Display.GetDerivative();
+
+		Controller.proportional(Proportional); 
+		Controller.integrative(integrative);
+		Controller.derivative(derivative);
+
+		eepromWriteParameters();	
+		storedParameters();
+
+		Display.usedData();	
 	}
 	
+	//ensure precise Ts of control parameters
+	if((millis() - lastUpdate)>=sampleTime){
 
+		controlRoutine();
+		updateDisplayValues();
+		lastUpdate = millis();
+	}
+
+	//////////////////////////////////////////////////////////////////////////////////////////////////
 }

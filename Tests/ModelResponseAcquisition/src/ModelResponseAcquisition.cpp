@@ -3,7 +3,7 @@
 #include "KalmanFilter.h"
 #include "control.h"
 
-//#define random
+#define random
 //#define openLoop
 
 #define potPin 			A0
