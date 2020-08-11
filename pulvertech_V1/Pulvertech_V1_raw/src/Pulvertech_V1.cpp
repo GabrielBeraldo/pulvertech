@@ -47,7 +47,7 @@ float PulsesPerLiter = 450.0; //nominal value from fluxometer
 float PulsesPerMeter = 20.32; //50000; //0.15*pow(10,6); //FURTHER INFO: done 1016 pulse conunt in first real test, so number was round for test purpouses
 float LiterPerHa = 60.0;
 float MachineWidth = 6.5;
-byte CalibrationKey= 105; //Key that indicates that the values on eeprom was already set as default or calibrated
+byte CalibrationKey= 101; //Key that indicates that the values on eeprom was already set as default or calibrated
 
 float Proportional	= 0.7;
 float Integrative	= 0.3;
